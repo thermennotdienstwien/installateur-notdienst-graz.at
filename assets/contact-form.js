@@ -1,8 +1,5 @@
-
 (() => {
-  const qs = (sel, root = document) => root.querySelector(sel);
-
-  const loadScriptOnce = (() => {
+  const loadOnce = (() => {
     const cache = new Map();
     return (src) => {
       if (cache.has(src)) return cache.get(src);
@@ -12,7 +9,7 @@
         s.async = true;
         s.defer = true;
         s.onload = () => resolve(true);
-        s.onerror = () => reject(new Error("Script load failed: " + src));
+        s.onerror = () => reject(new Error("Script load failed"));
         document.head.appendChild(s);
       });
       cache.set(src, p);
@@ -20,180 +17,167 @@
     };
   })();
 
-  function getValue(form, name) {
-    const el = form.querySelector(`[name="${CSS.escape(name)}"]`);
-    return el ? String(el.value ?? "").trim() : "";
+  const qs = (sel, root = document) => root.querySelector(sel);
+
+  function getFeedback(form) {
+    return (
+      qs('[data-form-feedback]', form) ||
+      (form.parentElement ? qs('[data-form-feedback]', form.parentElement) : null)
+    );
   }
 
-  function setIfMissing(fd, key, value) {
-    if (!value) return;
-    const existing = String(fd.get(key) ?? "").trim();
-    if (!existing) fd.set(key, value);
+  function show(feedback, type, title, text) {
+    if (!feedback) return;
+    const box = feedback.firstElementChild || feedback;
+    const t = qs("[data-form-feedback-title]", feedback);
+    const p = qs("[data-form-feedback-text]", feedback);
+
+    feedback.classList.remove("hidden");
+
+    box.classList.remove(
+      "bg-white/60",
+      "bg-red-100",
+      "bg-green-100",
+      "border-red-300",
+      "border-green-300",
+      "border-white/30"
+    );
+
+    if (type === "success") box.classList.add("bg-green-100", "border-green-300");
+    else if (type === "error") box.classList.add("bg-red-100", "border-red-300");
+    else box.classList.add("bg-white/60", "border-white/30");
+
+    if (t) t.textContent = title || "";
+    if (p) p.textContent = text || "";
   }
 
-  function initForm(form) {
+  async function ensureRecaptcha(siteKey) {
+    if (!siteKey) throw new Error("Missing reCAPTCHA site key");
+    await loadOnce("https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(siteKey));
+    if (!window.grecaptcha) throw new Error("grecaptcha not available");
+  }
+
+  async function getToken(siteKey) {
+    await ensureRecaptcha(siteKey);
+    return await new Promise((resolve, reject) => {
+      window.grecaptcha.ready(() => {
+        window.grecaptcha.execute(siteKey, { action: "kontakt" }).then(resolve).catch(reject);
+      });
+    });
+  }
+
+  function init(form) {
     if (!form) return;
 
-    const btn = qs('button[type="submit"]', form);
-    const spinner = btn ? qs('[role="status"]', btn) : null;
-
-    const privacy = qs("#privacy", form) || qs('[name="Datenschutz"]', form);
-
-    const feedback = qs("[data-form-feedback]", form);
-    const feedbackTitle = feedback ? qs("[data-form-feedback-title]", feedback) : null;
-    const feedbackText = feedback ? qs("[data-form-feedback-text]", feedback) : null;
-    const box = feedback ? feedback.firstElementChild : null;
-
+    const btn = qs('button[type="button"]', form);
+    const privacy = qs("#privacy", form);
+    const feedback = getFeedback(form);
     const siteKey = form.dataset.recaptcha || "";
-    let recaptchaLoaded = false;
 
-    const showMsg = (type, title, text) => {
-      if (!feedback || !box) return;
-
-      feedback.classList.remove("hidden");
-
-      box.classList.remove(
-        "bg-white/60",
-        "bg-red-100",
-        "bg-green-100",
-        "border-red-300",
-        "border-green-300",
-        "border-white/30"
-      );
-
-      if (type === "success") box.classList.add("bg-green-100", "border-green-300");
-      else if (type === "error") box.classList.add("bg-red-100", "border-red-300");
-      else box.classList.add("bg-white/60", "border-white/30");
-
-      if (feedbackTitle) feedbackTitle.textContent = title || "";
-      if (feedbackText) feedbackText.textContent = text || "";
+    const setBtnState = () => {
+      if (btn && privacy) btn.disabled = !privacy.checked;
     };
 
-    const hideMsg = () => {
-      if (!feedback) return;
-      feedback.classList.add("hidden");
-      if (feedbackTitle) feedbackTitle.textContent = "";
-      if (feedbackText) feedbackText.textContent = "";
-    };
-
-    const setLoading = (isLoading) => {
-      if (spinner) spinner.classList.toggle("invisible", !isLoading);
-      if (btn) btn.disabled = isLoading || (privacy ? !privacy.checked : false);
-    };
-
-    const enableState = async () => {
-      if (!btn) return;
-      hideMsg();
-
-      if (privacy && !privacy.checked) {
-        btn.disabled = true;
-        return;
-      }
-
-      if (siteKey && !recaptchaLoaded) {
-        recaptchaLoaded = true;
-        try {
-          await loadScriptOnce(
-            "https://www.google.com/recaptcha/api.js?render=" + encodeURIComponent(siteKey)
-          );
-        } catch (_) {
-        }
-      }
-
-      btn.disabled = false;
-    };
-
-    if (privacy) privacy.addEventListener("change", enableState);
-    enableState();
-
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
-      hideMsg();
+      e.stopPropagation();
+    });
+
+    if (privacy) {
+      privacy.addEventListener("change", async () => {
+        setBtnState();
+        if (privacy.checked && siteKey) {
+          try {
+            await ensureRecaptcha(siteKey);
+          } catch (_) {}
+        }
+      });
+    }
+
+    setBtnState();
+
+    if (!btn) return;
+
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (!form.reportValidity()) return;
 
       if (privacy && !privacy.checked) {
-        showMsg(
+        show(
+          feedback,
           "error",
-          "Bitte bestätigen Sie den Datenschutz.",
-          "Ohne Zustimmung können wir Ihre Anfrage leider nicht absenden."
+          "Datenschutz bestätigen",
+          "Bitte stimmen Sie der Datenschutzerklärung zu, um fortzufahren."
         );
         return;
       }
 
-      setLoading(true);
-      showMsg("info", "Wird gesendet…", "Bitte einen Moment warten.");
+      btn.disabled = true;
+      show(feedback, "info", "Wird gesendet…", "Bitte einen Moment warten.");
 
       try {
-        let token = "";
-        if (siteKey) {
-          if (!window.grecaptcha) {
-            showMsg(
-              "error",
-              "reCAPTCHA konnte nicht geladen werden.",
-              "Bitte versuchen Sie es erneut oder deaktivieren Sie ggf. Script-Blocker."
-            );
-            setLoading(false);
-            return;
-          }
-
-          token = await new Promise((resolve, reject) => {
-            window.grecaptcha.ready(() => {
-              window.grecaptcha
-                .execute(siteKey, { action: "kontakt" })
-                .then(resolve)
-                .catch(reject);
-            });
-          });
-        }
+        const token = await getToken(siteKey);
 
         const fd = new FormData(form);
 
-        // Senin HTML isimleri -> run.php'nin bekledikleri:
-        setIfMissing(fd, "name", getValue(form, "Ansprechpartner"));
-        setIfMissing(fd, "mail", getValue(form, "email"));
-        setIfMissing(fd, "tel", getValue(form, "Telefonnummer"));
-        setIfMissing(fd, "adresse", getValue(form, "Adresse"));
-        setIfMissing(fd, "nachricht", getValue(form, "Nachricht"));
+        const address = String(fd.get("address") || "").trim();
+        const plz = String(fd.get("plz") || "").trim();
+        const ort = String(fd.get("ort") || "").trim();
+        const msg = String(fd.get("msg") || "").trim();
 
-        if (privacy && privacy.checked) fd.set("tos", "1");
+        if (!fd.get("adresse") && address) fd.set("adresse", address);
 
-        if (token) fd.set("g-recaptcha-response", token);
+        let nachricht = String(fd.get("nachricht") || "").trim();
+        if (!nachricht && msg) nachricht = msg;
 
-        // 3) AJAX POST
+        const extra = [
+          address ? `Adresse: ${address}` : "",
+          plz ? `PLZ: ${plz}` : "",
+          ort ? `Ort: ${ort}` : ""
+        ].filter(Boolean).join(" | ");
+
+        if (extra) nachricht = nachricht ? `${nachricht}\n\n${extra}` : extra;
+
+        fd.set("nachricht", nachricht);
+        fd.set("tos", "1");
+        fd.set("g-recaptcha-response", token);
+
         const res = await fetch(form.action, { method: "POST", body: fd });
-        const text = await res.text().catch(() => "");
+        const text = (await res.text().catch(() => "")) || "";
 
         if (res.ok) {
-          showMsg(
+          show(
+            feedback,
             "success",
             "Vielen Dank!",
-            (text || "Vielen Dank für Ihre Anfrage! Wir melden uns in Kürze.").trim()
+            text.trim() || "Vielen Dank für Ihre Anfrage! Wir melden uns in Kürze."
           );
           form.reset();
-          enableState(); 
-          setLoading(false);
-          return;
+          setBtnState();
+        } else {
+          show(
+            feedback,
+            "error",
+            "Es ist ein Fehler aufgetreten.",
+            text.trim() || `Anfrage konnte nicht gesendet werden (HTTP ${res.status}).`
+          );
+          setBtnState();
         }
-
-        showMsg(
+      } catch (_) {
+        show(
+          feedback,
           "error",
           "Es ist ein Fehler aufgetreten.",
-          (text || `Anfrage konnte nicht gesendet werden (HTTP ${res.status}).`).trim()
+          "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder deaktivieren Sie ggf. Script-Blocker."
         );
-        enableState();
-        setLoading(false);
-      } catch (err) {
-        showMsg(
-          "error",
-          "Es ist ein Fehler aufgetreten.",
-          "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie uns an."
-        );
-        enableState();
-        setLoading(false);
+        setBtnState();
       }
     });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("form[data-contact-form]").forEach(initForm);
+    document.querySelectorAll('form[data-recaptcha][action*="contact.visiopartners.at"]').forEach(init);
   });
 })();
