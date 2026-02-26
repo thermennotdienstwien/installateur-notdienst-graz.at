@@ -397,40 +397,40 @@
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                 </div>
                 <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
-                <form action="https://formsubmit.co/office@visiopartners.com" method="POST"
+                <form  action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at" data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
-                        <input name="Ansprechpartner" required
+                        <input name="name" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Ansprechpartner" type="text" />
                     </div>
                     <div>
-                        <input name="email" required
+                        <input name="mail" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="E-Mail Adresse" type="email" />
                     </div>
                     <div>
-                        <input name="Telefonnummer" required
+                        <input name="tel" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Telefonnummer" type="tel" />
                     </div>
                     <div class="md:col-span-2">
-                        <input name="Adresse"
+                        <input name="address"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Adresse" type="text" />
                     </div>
                     <div>
-                        <input name="PLZ"
+                        <input name="plz"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="PLZ" type="text" />
                     </div>
                     <div>
-                        <input name="Ort"
+                        <input name="ort"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Ort" type="text" />
                     </div>
                     <div class="md:col-span-2">
-                        <textarea name="Nachricht" required
+                        <textarea name="msg" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Nachricht" rows="4"></textarea>
                     </div>
@@ -449,6 +449,15 @@
                         </button>
                     </div>
                 </form>
+
+
+                <div class="md:col-span-2 mt-4 hidden" data-form-feedback aria-live="polite">
+                  <div class="rounded-2xl p-4 border border-white/30 bg-white/60 backdrop-blur-md">
+                    <p class="font-bold mb-1" data-form-feedback-title></p>
+                    <p class="m-0 text-sm text-gray-700" data-form-feedback-text></p>
+                  </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -844,6 +853,7 @@
             }
         });
     </script>
+    <script src="/assets/contact-form.js" defer></script>
 </body>
 
 </html>
