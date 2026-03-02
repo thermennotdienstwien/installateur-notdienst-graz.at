@@ -61,9 +61,10 @@
         <div
             class="max-w-7xl mx-auto glass-panel bg-glass-light/70 dark:bg-glass-dark/70 rounded-2xl flex justify-between items-center px-6 py-3">
             <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
-                <span class="text-xl font-bold text-black dark:text-white tracking-tight">Installateur Notdienst
-                    Graz</span>
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
+                    <span class="text-xl font-bold text-black dark:text-white tracking-tight">Installateur Notdienst
+                        Graz</span>
             </div>
             <div class="hidden md:flex items-center space-x-8">
             </div>
@@ -74,7 +75,7 @@
                     <span class="material-symbols-outlined text-xl">brightness_4</span>
                 </button>
                 <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2 bg-primary text-white rounded-xl font-bold shadow-md transition-all hover:bg-red-900"
-                    href="tel:06766812090">
+                    href="tel:066493342464">
                     <span class="material-symbols-outlined text-sm">call</span>
                     24/7 Notruf
                 </a>
@@ -84,40 +85,51 @@
     <main class="relative z-10 pt-24 pb-12 px-4 sm:px-6 lg:px-8 space-y-24">
         <section class="flex items-center justify-center min-h-[calc(100vh-10rem)]">
             <div
-                class="w-full max-w-7xl glass-panel bg-glass-light/50 dark:bg-glass-dark/50 rounded-3xl p-10 lg:p-20 flex flex-col items-center text-center gap-12 shadow-2xl relative overflow-hidden lg:flex-row lg:text-left items-stretch">
-                <div class="absolute top-10 right-10 z-30">
-                    <div class="glass-card px-4 py-2 rounded-xl border border-white/40 flex items-center gap-2">
+                class="w-full max-w-7xl glass-panel bg-glass-light/50 dark:bg-glass-dark/50 rounded-3xl p-6 sm:p-10 lg:p-20 flex flex-col items-center text-center gap-8 lg:gap-12 shadow-2xl relative overflow-hidden lg:flex-row lg:text-left items-stretch">
+                <!-- Badge -->
+                <div
+                    class="lg:absolute lg:top-10 lg:right-10 z-30 order-first lg:order-none self-center lg:self-auto w-full lg:w-auto flex justify-center lg:block">
+                    <div
+                        class="glass-card px-4 py-2 rounded-xl border border-white/40 flex items-center gap-2 bg-white/40 dark:bg-black/40 backdrop-blur-md shadow-sm">
                         <span class="material-symbols-outlined text-yellow-500">star</span>
-                        <span class="text-sm font-bold">100% Kundenzufriedenheit</span>
+                        <span class="text-sm font-bold text-black dark:text-white">100% Kundenzufriedenheit</span>
                     </div>
                 </div>
-                <div class="w-full max-w-2xl space-y-8 flex flex-col lg:items-start lg:text-left relative z-10">
+                <!-- Text Content -->
+                <div
+                    class="w-full max-w-2xl space-y-6 lg:space-y-8 flex flex-col justify-center items-center lg:items-start lg:text-left relative z-10 flex-1">
                     <div
                         class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 dark:bg-white/10 backdrop-blur-sm border border-white/20">
                         <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-                        <span class="text-sm font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider">24h
+                        <span
+                            class="text-xs sm:text-sm font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider">24h
                             Soforthilfe</span>
                     </div>
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-black dark:text-white leading-tight">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white leading-tight">
                         Installateur Notdienst Graz<br />
                         <span class="text-primary dark:text-green-400">24/7 Hilfe</span>
                     </h1>
-                    <p class="text-lg text-black dark:text-gray-300 leading-relaxed max-w-xl">
-                        Abfluss verstopft? Ob
+                    <p class="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed max-w-xl">
+                        <strong>Abfluss verstopft</strong>? Ob
                         Abflussverstopfung, WC verstopft, Wasserrohrbruch oder akute Überschwemmung – wir reagieren
                         schnell, professionell und sorgen für eine sichere, fachgerechte Lösung.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center lg:justify-start">
-                        <a class="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-green-900/20 hover:shadow-green-900/40 transform hover:-translate-y-1 transition-all flex justify-center items-center gap-2 text-lg w-full sm:w-auto hover:bg-red-900"
-                            href="tel:06766812090">
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2 lg:pt-4 w-full justify-center lg:justify-start">
+                        <a class="px-6 sm:px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-green-900/20 hover:shadow-green-900/40 transform hover:-translate-y-1 transition-all flex justify-center items-center gap-2 text-base sm:text-lg w-full sm:w-auto hover:bg-red-900"
+                            href="tel:066493342464">
                             <span class="material-symbols-outlined">phone_in_talk</span>
                             JETZT ANRUFEN
                         </a>
                     </div>
                 </div>
-                <img alt="Professional Service Team"
-                    class="absolute bottom-0 right-0 w-auto h-auto max-h-[80%] max-w-[50%] object-contain object-bottom-right z-20 pointer-events-none"
-                    src="assets/installateur-notdienst-team.png" />
+                <!-- Image -->
+                <div
+                    class="w-full lg:w-auto relative lg:absolute lg:bottom-0 lg:right-0 z-20 pointer-events-none flex justify-center lg:inline-block mt-4 lg:mt-0 order-last">
+                    <img alt="Professional Service Team"
+                        class="w-auto h-auto max-h-[300px] sm:max-h-[400px] lg:max-h-[80%] max-w-full lg:max-w-[50vw] object-contain object-bottom lg:object-bottom-right"
+                        src="assets/installateur-notdienst-team.png" />
+                </div>
             </div>
         </section>
         <section class="max-w-7xl mx-auto w-full relative">
@@ -137,11 +149,16 @@
                         um die Uhr.</span>
                 </h2>
                 <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Ihr zuverlässiger <strong>Installateur Notdienst Graz</strong> ist 24 Stunden für Sie erreichbar.
-                    Wir sind
-                    kompetenter Partner für alle Sanitär- und
-                    Heizungsanfragen und schnell vor Ort.
+                    Ihr zuverlässiger Installateur Notdienst Graz ist 24 Stunden für Sie erreichbar. Wir sind
+                    kompetenter Partner für alle Sanitär- und Heizungsanfragen und schnell vor Ort.
+                    Ob akuter Wasserrohrbruch, verstopfter Abfluss, Heizungsstörung oder ein plötzlicher Ausfall der
+                    Warmwasserversorgung – wir reagieren rasch und professionell. Als <strong>Notdienst Installateur
+                        Graz</strong> legen wir großen Wert auf transparente Preise,
+                    fachgerechte Ausführung und saubere Arbeitsweise. Dank moderner Technik und langjähriger Erfahrung
+                    können wir Probleme effizient analysieren und direkt vor Ort beheben. Ihre Sicherheit und
+                    Zufriedenheit stehen für uns an erster Stelle.
                 </p>
+
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
                 <div
@@ -150,10 +167,14 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">plumbing</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Rohrreinigung</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Professionelle <strong>Beseitigung von
-                            Abflussverstopfungen</strong> in
-                        Küche, Bad und WC mit modernster Technik.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">ROHRREINIGUNG GRAZ</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Unsere <strong>Rohrreinigung Graz</strong> sorgt
+                        für die professionelle und nachhaltige Beseitigung von Abflussverstopfungen in Küche, Bad und
+                        WC. Mit modernster Technik wie Spiralen, Hochdruckspülung und Kamerainspektion werden
+                        Ablagerungen, Fett, Haare und sonstige Rückstände gründlich entfernt. Die Rohrreinigung Graz
+                        hilft nicht nur bei akuten Verstopfungen, sondern beugt auch zukünftigen Problemen und
+                        unangenehmen Gerüchen vor. So stellen wir sicher, dass Ihre Leitungen wieder frei durchgängig
+                        funktionieren und größere Schäden vermieden werden.</p>
                 </div>
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
@@ -161,9 +182,15 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">water_damage</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Wasserschaden</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Schnelle Leckortung und Trocknung zur
-                        Minimierung von Folgeschäden an Ihrer Immobilie.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">WASSERSCHADEN GRAZ</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Bei einem <strong>Wasserschaden Graz</strong>
+                        ist rasches Handeln entscheidend. Unser Service für Wasserschaden Graz umfasst eine präzise
+                        Leckortung, Sofortmaßnahmen zur Schadensbegrenzung sowie eine professionelle Trocknung der
+                        betroffenen Bereiche. Durch den Einsatz moderner Messtechnik erkennen wir versteckte
+                        Feuchtigkeit in Wänden und Böden und verhindern dadurch Schimmelbildung und strukturelle
+                        Schäden. Ziel unseres Wasserschaden Graz Services ist es, Folgeschäden an Ihrer Immobilie so
+                        gering wie möglich zu halten und den ursprünglichen Zustand schnellstmöglich wiederherzustellen.
+                    </p>
                 </div>
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
@@ -171,9 +198,14 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">hvac</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Heizungsservice</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Wartung, Reparatur und Notdienst für alle
-                        gängigen Heizungssysteme und Marken.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">HEIZUNGSSERVICE GRAZ</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Unser <strong>Heizungservice Graz</strong>
+                        bietet umfassende Wartung, Reparatur und Notdienstleistungen für alle gängigen Heizungssysteme
+                        und Marken. Der Heizungservice Graz sorgt dafür, dass Ihre Heizungsanlage effizient, sicher und
+                        zuverlässig arbeitet – besonders in der kalten Jahreszeit. Wir überprüfen sämtliche Komponenten,
+                        tauschen Verschleißteile aus und beheben Störungen fachgerecht. Mit einem regelmäßigen
+                        Heizungservice Graz verlängern Sie die Lebensdauer Ihrer Anlage und reduzieren langfristig Ihre
+                        Energiekosten.</p>
                 </div>
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
@@ -181,9 +213,14 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">settings_system_daydream</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Thermenwartung</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Regelmäßige Überprüfung für Effizienz,
-                        Sicherheit und Langlebigkeit Ihrer Gastherme.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">THERMENWARTUNG</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Eine regelmäßige Thermenwartung ist entscheidend
+                        für die Effizienz, Sicherheit und Langlebigkeit Ihrer Gastherme. Im Rahmen der Thermenwartung
+                        werden Brenner, Wärmetauscher und sicherheitsrelevante Bauteile gründlich überprüft und
+                        gereinigt. Die Thermenwartung trägt dazu bei, den Gasverbrauch zu optimieren und das Risiko von
+                        Störungen oder gefährlichen Defekten zu minimieren. Durch eine fachgerechte Thermenwartung
+                        stellen Sie sicher, dass Ihre Therme zuverlässig arbeitet und alle gesetzlichen Vorgaben
+                        eingehalten werden.</p>
                 </div>
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
@@ -191,9 +228,14 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">water_drop</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Abflussdienst</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Gründliche Reinigung von Abflussrohren und
-                        Kanälen zur Vorbeugung von Rückstau.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">ABFLUSSDIENST GRAZ</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Der <strong>Abflussdienst Graz</strong>
+                        übernimmt die gründliche Reinigung von Abflussrohren und Kanälen, um Verstopfungen und Rückstau
+                        effektiv vorzubeugen. Mit dem Abflussdienst Graz werden selbst hartnäckige Ablagerungen
+                        professionell entfernt, sodass das Abwasser wieder ungehindert abfließen kann. Unser
+                        Abflussdienst Graz arbeitet mit modernen Geräten und sorgt für eine nachhaltige Lösung statt
+                        kurzfristiger Behelfsmethoden. Dadurch schützen Sie Ihr Zuhause vor Wasserschäden und
+                        unangenehmen Gerüchen.</p>
                 </div>
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
@@ -201,9 +243,14 @@
                         class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">shower</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Sanitärinstallation</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Fachgerechte Montage und Reparatur von
-                        Armaturen, Toiletten, Duschen und Badewannen.</p>
+                    <h3 class="text-xl font-bold text-black dark:text-white">SANITÄRINSTALLATIONEN GRAZ</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Unsere <strong>Sanitärinstallationen
+                            Graz</strong> umfassen die fachgerechte Montage und Reparatur von Armaturen, Toiletten,
+                        Duschen und Badewannen. Bei Sanitärinstallationen Graz achten wir auf hochwertige Materialien,
+                        präzise Ausführung und langlebige Lösungen. Egal ob Neuinstallation, Modernisierung oder
+                        Reparatur – Sanitärinstallationen Graz garantieren eine sichere und funktionale Umsetzung Ihrer
+                        Sanitärprojekte. So stellen wir sicher, dass Ihr Badezimmer technisch einwandfrei und optisch
+                        ansprechend ausgestattet ist.</p>
                 </div>
             </div>
         </section>
@@ -308,12 +355,14 @@
                             <a class="glass-card px-6 py-4 rounded-xl flex justify-between items-center group hover:bg-white/40 transition-all border-white/30"
                                 href="/thermenwartung.html">
                                 <span class="font-semibold text-black dark:text-white">Thermenwartung</span>
-                                <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
                             <a class="glass-card px-6 py-4 rounded-xl flex justify-between items-center group hover:bg-white/40 transition-all border-white/30"
                                 href="#">
                                 <span class="font-semibold text-black dark:text-white">Thermentausch</span>
-                                <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
                             <a class="glass-card px-6 py-4 rounded-xl flex justify-between items-center group hover:bg-white/40 transition-all border-white/30"
                                 href="#">
@@ -356,8 +405,8 @@
             <div
                 class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center">
                 <a class="flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all text-xl hover:bg-red-900"
-                    href="tel:06766812090">
-                    <span class="material-symbols-outlined">call</span>0676 681 20 90
+                    href="tel:066493342464">
+                    <span class="material-symbols-outlined">call</span>0664 9334 2464
                 </a>
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold">
@@ -397,7 +446,8 @@
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                 </div>
                 <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
-                <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at" data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
+                <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at"
+                    data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
                         <input name="name" required
@@ -419,15 +469,35 @@
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Adresse" type="text" />
                     </div>
-                    <div>
-                        <input name="plz"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="PLZ" type="text" />
-                    </div>
-                    <div>
-                        <input name="ort"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Ort" type="text" />
+                    <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <input name="plz"
+                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                                placeholder="PLZ" type="text" />
+                        </div>
+                        <div>
+                            <input name="ort"
+                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                                placeholder="Ort" type="text" />
+                        </div>
+                        <div>
+                            <select name="service" required
+                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all text-gray-500">
+                                <option value="" disabled selected>Service wählen</option>
+                                <option value="Installateur Notdienst" class="text-black dark:text-white">Installateur
+                                    Notdienst</option>
+                                <option value="Abflussverstopfung" class="text-black dark:text-white">Abflussverstopfung
+                                </option>
+                                <option value="Wasserschaden" class="text-black dark:text-white">Wasserschaden</option>
+                                <option value="Kanalverstopfung" class="text-black dark:text-white">Kanalverstopfung
+                                </option>
+                                <option value="Thermenstörung" class="text-black dark:text-white">Thermenstörung
+                                </option>
+                                <option value="Thermenwartung" class="text-black dark:text-white">Thermenwartung
+                                </option>
+                                <option value="Thermentausch" class="text-black dark:text-white">Thermentausch</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="md:col-span-2">
                         <textarea name="msg" required
@@ -452,10 +522,10 @@
 
 
                 <div class="md:col-span-2 mt-4 hidden" data-form-feedback aria-live="polite">
-                  <div class="rounded-2xl p-4 border border-white/30 bg-white/60 backdrop-blur-md">
-                    <p class="font-bold mb-1" data-form-feedback-title></p>
-                    <p class="m-0 text-sm text-gray-700" data-form-feedback-text></p>
-                  </div>
+                    <div class="rounded-2xl p-4 border border-white/30 bg-white/60 backdrop-blur-md">
+                        <p class="font-bold mb-1" data-form-feedback-title></p>
+                        <p class="m-0 text-sm text-gray-700" data-form-feedback-text></p>
+                    </div>
                 </div>
 
             </div>
@@ -585,13 +655,15 @@
                     Graz</b> – rasch erreichbar, technisch bestens ausgestattet und jederzeit einsatzbereit.
             </p>
             <div class="inline-block bg-primary/10 border border-primary/20 rounded-2xl p-6 mt-8">
-                <h4 class="text-2xl font-bold text-primary mb-2">Therme Notdienst Callout</h4>
-                <p class="text-gray-700 dark:text-gray-300 mb-6">Sofort-Hilfe für Ihre Gastherme – Reparatur und Wartung
-                    direkt vor Ort.</p>
+                <h4 class="text-2xl font-bold text-primary mb-2">24/7 Notdienst für Abflussprobleme in Graz</h4>
+                <p class="text-gray-700 dark:text-gray-300 mb-6"><mark>Wir stehen Ihnen jederzeit zur Verfügung und
+                        reagieren umgehend auf Ihr Anliegen. Rufen Sie uns direkt unter 0676 718 04 64 an – wir kümmern
+                        uns rasch, zuverlässig und fachgerecht um Ihr Problem und sorgen für eine nachhaltige
+                        Lösung.</mark></p>
                 <a class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-md transition-all hover:bg-red-900"
-                    href="tel:06766812090">
+                    href="tel:066493342464">
                     <span class="material-symbols-outlined text-sm">call</span>
-                    0676 681 20 90
+                    0664 9334 2464
                 </a>
             </div>
         </div>
@@ -733,8 +805,12 @@
                 <!-- Graz Districts -->
                 <div>
                     <h3
-                        class="text-xl md:text-2xl font-bold text-black dark:text-white mb-6 border-l-4 border-primary pl-4">
+                        class="text-xl md:text-2xl font-bold text-black dark:text-white mb-2 border-l-4 border-primary pl-4">
                         Bezirke in Land Graz: Wir sind in allen Bezirken und Gemeinden in Graz im Einsatz</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-4xl">
+                        Egal ob Innere Stadt oder Puntigam – unser Notdienst-Team ist in allen 17 Stadtbezirken rasch
+                        und zuverlässig für Sie zur Stelle.
+                    </p>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         <div class="text-sm font-medium text-gray-700 dark:text-gray-300">INNERE STADT</div>
                         <div class="text-sm font-medium text-gray-700 dark:text-gray-300">SANKT LEONHARD</div>
@@ -760,9 +836,9 @@
                     <h3
                         class="text-xl md:text-2xl font-bold text-black dark:text-white mb-2 border-l-4 border-primary pl-4">
                         Einige Gemeinden in Graz-Umgebung: Wir sind in ganz Graz tätig</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-4xl italic">Unsere professionellen
-                        Kaminspezialisten garantieren kurze Reaktionszeiten und zuverlässige Hilfe - für ein sicheres
-                        und effizientes Kaminsystem in ganz Graz.</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-4xl">Unser professionelles Team garantiert
+                        kurze Reaktionszeiten und fachgerechte Lösungen für Ihre Heizungs- und Sanitäranlagen in der
+                        gesamten Region Graz-Umgebung.</p>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         <div class="text-sm font-medium text-gray-700 dark:text-gray-300">DEUTSCHFEISTRITZ</div>
                         <div class="text-sm font-medium text-gray-700 dark:text-gray-300">DOBL-ZWARING</div>
@@ -834,8 +910,8 @@
                 </nav>
             </div>
             <a class="flex items-center gap-3 px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-lg transition-all whitespace-nowrap hover:bg-red-900"
-                href="tel:06766812090">
-                <span class="material-symbols-outlined">call</span>0676 681 20 90
+                href="tel:066493342464">
+                <span class="material-symbols-outlined">call</span>0664 9334 2464
             </a>
         </div>
         <div
