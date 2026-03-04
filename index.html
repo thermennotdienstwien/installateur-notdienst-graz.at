@@ -491,12 +491,9 @@
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                 </div>
                 <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
-                <form action="https://formsubmit.co/office@installateur-notdienst-graz.at" method="POST"
+                <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at"
+                    data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="hidden" name="_cc" value="office@installateur-not24.at">
-                    <input type="hidden" name="_subject" value="Neue Anfrage über Website">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://installateur-notdienst-graz.at/">
                     <div class="md:col-span-2">
                         <input name="name"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
@@ -566,7 +563,7 @@
                     <div class="md:col-span-2 pt-4">
                         <button
                             class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-xl shadow-xl transform hover:-translate-y-1 transition-all hover:bg-red-900"
-                            type="submit">
+                            type="button">
                             Anfrage abschicken
                         </button>
                     </div>
