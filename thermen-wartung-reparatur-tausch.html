@@ -54,21 +54,28 @@
         <div class="floating-shape shape-4"></div>
     </div>
 
-    <nav class="fixed w-full z-50 top-0 left-0 px-6 py-4">
+    <nav class="fixed w-full z-50 top-0 left-0 px-4 sm:px-6 py-4">
         <div
-            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 dark:bg-glass-dark/70 rounded-2xl flex justify-between items-center px-6 py-3">
-            <a href="index.html" class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
-                <span class="text-xl font-bold text-black dark:text-white tracking-tight">Installateur Notdienst
-                    Graz</span>
-            </a>
-            <div class="flex items-center gap-4">
+            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 dark:bg-glass-dark/70 rounded-2xl flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-3 gap-3 sm:gap-0">
+            <div class="flex justify-between items-center w-full sm:w-auto">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
+                    <span class="text-lg sm:text-xl font-bold text-black dark:text-white tracking-tight">Installateur
+                        Notdienst Graz</span>
+                </a>
                 <button
-                    class="p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 text-black dark:text-white transition"
+                    class="sm:hidden p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 text-black dark:text-white transition"
+                    onclick="document.getElementById('theme-toggle').click()">
+                    <span class="material-symbols-outlined text-xl">brightness_4</span>
+                </button>
+            </div>
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+                <button
+                    class="hidden sm:block p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 text-black dark:text-white transition"
                     id="theme-toggle">
                     <span class="material-symbols-outlined text-xl">brightness_4</span>
                 </button>
-                <a class="hidden sm:inline-flex items-center gap-2 px-5 py-2 bg-primary text-white rounded-xl font-bold shadow-md transition-all hover:bg-red-900"
+                <a class="flex justify-center w-full sm:w-auto items-center gap-2 px-5 py-2 bg-primary text-white rounded-xl font-bold shadow-md transition-all hover:bg-red-900"
                     href="tel:066493342464">
                     <span class="material-symbols-outlined text-sm">call</span>
                     24/7 Notruf
@@ -77,7 +84,7 @@
         </div>
     </nav>
 
-    <main class="relative z-10 pt-24 pb-12 px-4 sm:px-6 lg:px-8 space-y-24">
+    <main class="relative z-10 pt-36 sm:pt-24 pb-12 px-4 sm:px-6 lg:px-8 space-y-24">
         <!-- Hero Section -->
         <section class="flex items-center justify-center min-h-[calc(100vh-10rem)]">
             <div
@@ -414,7 +421,247 @@
             </div>
         </section>
 
-        <!-- SEO Text Block (Moved after Brands) -->
+        <!-- Contact Form & Notruf -->
+        <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10 mt-12 mb-12">
+            <div
+                class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center">
+                <a class="flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all text-xl hover:bg-red-900"
+                    href="tel:066493342464">
+                    <span class="material-symbols-outlined">call</span>0664 9334 2464
+                </a>
+                <div class="flex-1">
+                    <h3 class="text-2xl md:text-3xl font-bold">
+                        <span class="text-primary">NOTFALL?</span> <span class="text-black dark:text-white">Rufen Sie
+                            uns jetzt.</span>
+                    </h3>
+                </div>
+                <a class="flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all hover:bg-red-900"
+                    href="#anfrage">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    Anfrage abschicken
+                </a>
+            </div>
+        </section>
+
+        <!-- Marken Detail Section -->
+        <section class="max-w-7xl mx-auto w-full mt-24 mb-12 px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="space-y-16 max-w-5xl mx-auto">
+
+                <!-- Intro -->
+                <div class="text-center space-y-4">
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Thermenwartung, Reparatur & Heizungsservice in Graz
+                            –</span>
+                        <span class="text-primary">Service für viele Marken</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Unsere Techniker betreuen Heizungsanlagen in Graz, Graz Umgebung und in der gesamten Steiermark.
+                        Wir bieten professionelle Thermenwartung, Thermenreparatur und Thermentausch für zahlreiche
+                        bekannte Hersteller. Dazu gehören unter anderem Austria Email, Bosch, Baxi, Junkers, Vaillant,
+                        Buderus, Wolf, Gebe, Löblich, Viessmann und Saunier Duval. Auch bei Problemen mit Gasthermen,
+                        Brennwertthermen, Heizkesseln, Kombithermen oder modernen Heizsystemen stehen wir zuverlässig
+                        zur Verfügung. Unser Service unterstützt Sie bei Wartung, Reparatur und technischen Störungen
+                        Ihrer Heizungsanlage, damit Ihre Heizung effizient und sicher funktioniert.
+                    </p>
+                </div>
+
+                <!-- AUSTRIA EMAIL -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Schnelle Hilfe bei Heizungsstörung in Graz –</span>
+                        <span class="text-primary">AUSTRIA EMAIL THERMEN SERVICE</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Heizung ausgefallen oder funktioniert Ihre Anlage nicht mehr richtig? In Graz, Graz Umgebung und
+                        ganz Steiermark stehen wir Ihnen schnell zur Verfügung und helfen bei Heizungsproblemen jeder
+                        Art. Für Austria Email Heizsysteme bieten wir zuverlässigen Service rund um Thermenwartung und
+                        regelmäßige Überprüfung Ihrer Heizungsanlage. Unsere Techniker kümmern sich um Thermenreparatur,
+                        Thermentausch sowie Wartung von Gasthermen, Brennwertthermen, Heizkesseln und Kombithermen. Auch
+                        Warmwasserboiler und Boilerheizungen werden professionell geprüft, damit Ihre Gasheizung
+                        effizient arbeitet.
+                    </p>
+                </div>
+
+                <!-- BOSCH -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Wartung, Reparatur & Heizungsservice vom Profi –</span>
+                        <span class="text-primary">BOSCH THERMEN IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Benötigen Sie schnelle Hilfe bei einer Heizungsstörung in Graz oder Umgebung? Unser Service ist
+                        auch kurzfristig erreichbar und unterstützt Sie zuverlässig bei Problemen mit Ihrer
+                        Heizungsanlage. Unser Service für Bosch Heizsysteme umfasst Wartung, Reparatur und Austausch
+                        moderner Heizgeräte in Graz und der gesamten Steiermark. Wir betreuen Gasthermen,
+                        Brennwertthermen und Heizkessel sowie komplette Heizungsanlagen. Auch Wärmepumpen,
+                        Hybridheizungen und Kombithermen gehören zu unserem Servicebereich.
+                    </p>
+                </div>
+
+                <!-- BAXI -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">24 Stunden Notdienst bei Heizungsausfall –</span>
+                        <span class="text-primary">BAXI THERME IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Wenn Ihre Heizung nicht mehr richtig funktioniert oder Warmwasser fehlt, ist schnelle Hilfe
+                        wichtig. Unser Team ist in Graz und Graz Umgebung erreichbar und unterstützt Sie bei
+                        Heizungsproblemen. Bei Baxi Heizsystemen übernehmen wir den kompletten Thermenservice und
+                        kümmern uns um Thermenreparatur und Thermentausch ebenso wie um die Wartung von Gasthermen,
+                        Brennwertgeräten und Heizkesseln. Auch Kombithermen, Warmwasserboiler und moderne Heizsysteme
+                        werden von unseren Technikern regelmäßig überprüft.
+                    </p>
+                </div>
+
+                <!-- JUNKERS -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Thermenwartung, Reparatur oder Austausch –</span>
+                        <span class="text-primary">JUNKERS HEIZUNGSSERVICE GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Eine Heizungstörung kann jederzeit auftreten – besonders in der kalten Jahreszeit. Unser Team
+                        unterstützt Sie schnell bei Problemen mit Ihrer Heizungsanlage in Graz und der gesamten
+                        Steiermark. Für Junkers Heizsysteme bieten wir umfassenden Service und übernehmen
+                        Thermenwartung, Thermenreparatur und Thermentausch bei Gasthermen, Brennwertthermen und
+                        Heizkesseln. Auch Kombithermen, Warmwasserboiler und komplette Heizungsanlagen werden
+                        professionell gewartet.
+                    </p>
+                </div>
+
+                <!-- VAILLANT -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Soforthilfe bei Heizungsproblemen –</span>
+                        <span class="text-primary">VAILLANT THERME SERVICE IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Ihre Heizung zeigt eine Störung oder arbeitet nicht mehr effizient? Unser Service ist in Graz,
+                        Graz Umgebung und der gesamten Steiermark erreichbar und hilft schnell bei Heizungsproblemen.
+                        Wir betreuen Vaillant Heizsysteme und kümmern uns um Thermenwartung, Thermenreparatur und
+                        Thermentausch bei modernen Gasthermen, Brennwertgeräten und Heizkesseln. Auch Wärmepumpen,
+                        Hybridheizungen und Kombithermen werden regelmäßig gewartet, damit Ihre Heizung zuverlässig
+                        funktioniert.
+                    </p>
+                </div>
+
+                <!-- BUDERUS -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Professionelle Wartung und Reparatur Ihrer Heizung
+                            –</span>
+                        <span class="text-primary">BUDERUS THERMEN IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Heizungsausfall oder Probleme mit der Heizungsanlage? In Graz und Umgebung stehen unsere
+                        Techniker bereit und unterstützen Sie bei Störungen oder Wartungsarbeiten. Bei Buderus Heizungen
+                        kümmern wir uns um Wartung, Reparatur und Austausch von Thermen und Heizgeräten und betreuen
+                        Gasheizungen, Brennwertheizungen und Heizkessel sowie komplette Heizsysteme. Auch
+                        Warmwasserboiler und Kombithermen werden fachgerecht überprüft.
+                    </p>
+                </div>
+
+                <!-- WOLF -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Soforthilfe im Heizungsnotfall in Graz –</span>
+                        <span class="text-primary">WOLF THERMENSERVICE</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Wenn Ihre Heizungsanlage nicht richtig funktioniert oder eine Störung anzeigt, stehen wir Ihnen
+                        in Graz und der gesamten Steiermark schnell zur Verfügung. Unsere Techniker betreuen Wolf
+                        Heizsysteme und übernehmen Thermenwartung, Thermenreparatur und Thermentausch bei Gasthermen,
+                        Brennwertthermen und Heizkesseln. Auch Wärmepumpen, Hybridheizungen und Kombithermen gehören zu
+                        unserem Service.
+                    </p>
+                </div>
+
+                <!-- GEBE -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Schneller Service bei Heizungsstörungen –</span>
+                        <span class="text-primary">GEBE HEIZUNGSSERVICE GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Probleme mit der Heizung oder kein Warmwasser? Unser Service ist in Graz und Graz Umgebung
+                        erreichbar und hilft schnell bei Heizungsstörungen. Für Gebe Heizsysteme bieten wir
+                        professionellen Kundendienst und kümmern uns um Wartung, Reparatur und Austausch von Gasthermen,
+                        Brennwertgeräten und Heizkesseln sowie um die regelmäßige Überprüfung Ihrer Heizungsanlage.
+                    </p>
+                </div>
+
+                <!-- LÖBLICH -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Wartung und Reparatur moderner Heizungsanlagen –</span>
+                        <span class="text-primary">LÖBLICH THERMEN IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Bei einer Heizungsstörung oder einem Ausfall Ihrer Anlage ist schnelle Hilfe wichtig. Unser Team
+                        unterstützt Sie in Graz und der gesamten Steiermark zuverlässig bei Heizungsproblemen. Für
+                        Löblich Heizsysteme übernehmen wir Thermenwartung, Thermenreparatur und Thermentausch und
+                        betreuen Gasthermen, Brennwertthermen, Kombithermen und Heizkessel sowie Warmwasserboiler und
+                        komplette Heizsysteme.
+                    </p>
+                </div>
+
+                <!-- VIESSMANN -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">Zuverlässiger Kundendienst für Heizsysteme –</span>
+                        <span class="text-primary">VIESSMANN THERMEN SERVICE GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Funktioniert Ihre Heizung nicht mehr richtig oder benötigt sie eine Wartung? Unser Team steht
+                        Ihnen in Graz und Umgebung schnell zur Verfügung. Für Viessmann Heizsysteme bieten wir
+                        zuverlässigen Service und kümmern uns um Gasthermen, Brennwertthermen und Heizkessel sowie um
+                        Wartung und Reparatur moderner Heizungsanlagen, Wärmepumpen und Kombithermen.
+                    </p>
+                </div>
+
+                <!-- SAUNIER DUVAL -->
+                <div class="text-center space-y-4">
+                    <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
+                        <span class="text-black dark:text-white">24/7-NOTDIENST FÜR THERMEN-STÖRUNGEN, REPARATUR ODER
+                            TAUSCH –</span>
+                        <span class="text-primary">SAUNIER DUVAL THERME IN GRAZ</span>
+                    </h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                        Eine Heizungsstörung kommt oft unerwartet und erfordert schnelle Unterstützung. Unser Service
+                        ist in Graz, Graz Umgebung und ganz Steiermark erreichbar und hilft bei Heizungsproblemen.
+                        Unsere Techniker betreuen Saunier Duval Heizsysteme und übernehmen Thermenwartung,
+                        Thermenreparatur und Thermentausch bei Gasthermen, Brennwertgeräten, Kombithermen und
+                        Heizkesseln sowie bei kompletten Heizungsanlagen.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Form & Notruf -->
+        <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10 mt-12 mb-12">
+            <div
+                class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center">
+                <a class="flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all text-xl hover:bg-red-900"
+                    href="tel:066493342464">
+                    <span class="material-symbols-outlined">call</span>0664 9334 2464
+                </a>
+                <div class="flex-1">
+                    <h3 class="text-2xl md:text-3xl font-bold">
+                        <span class="text-primary">NOTFALL?</span> <span class="text-black dark:text-white">Rufen Sie
+                            uns jetzt.</span>
+                    </h3>
+                </div>
+                <a class="flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all hover:bg-red-900"
+                    href="#anfrage">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    Anfrage abschicken
+                </a>
+            </div>
+        </section>
+
+        <!-- SEO Text Block (Moved after Contact Form & Notruf) -->
         <section class="max-w-7xl mx-auto w-full mt-24 px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="space-y-8 text-center max-w-5xl mx-auto">
                 <div class="text-sm font-bold tracking-widest uppercase text-gray-500 mb-2">
@@ -467,28 +714,6 @@
                         Vertrauen Sie auf professionelle Betreuung in Graz – zuverlässig, fachgerecht und termingerecht.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Form & Notruf -->
-        <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10 mt-12 mb-12">
-            <div
-                class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center">
-                <a class="flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all text-xl hover:bg-red-900"
-                    href="tel:066493342464">
-                    <span class="material-symbols-outlined">call</span>0664 9334 2464
-                </a>
-                <div class="flex-1">
-                    <h3 class="text-2xl md:text-3xl font-bold">
-                        <span class="text-primary">NOTFALL?</span> <span class="text-black dark:text-white">Rufen Sie
-                            uns jetzt.</span>
-                    </h3>
-                </div>
-                <a class="flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl transition-all hover:bg-red-900"
-                    href="#anfrage">
-                    <span class="material-symbols-outlined text-sm">send</span>
-                    Anfrage abschicken
-                </a>
             </div>
         </section>
 
