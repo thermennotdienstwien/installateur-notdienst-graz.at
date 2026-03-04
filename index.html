@@ -491,21 +491,26 @@
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                 </div>
                 <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
-                <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at"
-                    data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
+                <form action="https://formsubmit.co/office@installateur-notdienst-graz.at" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="hidden" name="_cc" value="office@installateur-not24.at">
+                    <input type="hidden" name="_subject" value="Neue Anfrage über Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://installateur-notdienst-graz.at/">
                     <div class="md:col-span-2">
-                        <input name="name" required
+                        <input name="name"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Ansprechpartner *" type="text" />
+                            placeholder="Ansprechpartner" type="text" />
                     </div>
                     <div>
-                        <input name="mail" required
+                        <input name="mail"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="E-Mail Adresse *" type="email" />
+                            placeholder="E-Mail Adresse" type="email" />
                     </div>
                     <div>
                         <input name="tel" required
+                            oninvalid="this.setCustomValidity('Bitte geben Sie Ihre Telefonnummer an.')"
+                            oninput="this.setCustomValidity('')"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Telefonnummer *" type="tel" />
                     </div>
@@ -545,12 +550,14 @@
                         </div>
                     </div>
                     <div class="md:col-span-2">
-                        <textarea name="msg" required
+                        <textarea name="msg"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Nachricht *" rows="4"></textarea>
+                            placeholder="Nachricht" rows="4"></textarea>
                     </div>
                     <div class="md:col-span-2 flex items-start gap-3 py-2">
-                        <input name="Datenschutz" required class="mt-1 rounded text-primary focus:ring-primary"
+                        <input name="Datenschutz" required
+                            oninvalid="this.setCustomValidity('Bitte stimmen Sie der Datenschutzerklärung zu.')"
+                            oninput="this.setCustomValidity('')" class="mt-1 rounded text-primary focus:ring-primary"
                             id="privacy" type="checkbox" />
                         <label class="text-sm text-gray-600 dark:text-gray-400 leading-tight" for="privacy">Ich bin mit
                             der <a href="datenschutzerklaerung.html"
@@ -559,7 +566,7 @@
                     <div class="md:col-span-2 pt-4">
                         <button
                             class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-xl shadow-xl transform hover:-translate-y-1 transition-all hover:bg-red-900"
-                            type="button">
+                            type="submit">
                             Anfrage abschicken
                         </button>
                     </div>
