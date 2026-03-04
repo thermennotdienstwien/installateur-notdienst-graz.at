@@ -1,85 +1,505 @@
-.glass-panel {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+:root {
+    --color-primary: #001f3f;
+    --color-highlight: #0074e4;
+    --color-bg: #f4f4f4;
+    --color-card: #ffffff;
+    --color-text: #111111;
+    --color-text-secondary: #666666;
+    --color-text-light: #ffffff;
+    --color-text-light-dim: rgba(255, 255, 255, 0.7);
+    --border-radius: 12px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --footer-height: 110px;
+    --header-height: 104px;
 }
 
-.glass-card {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
-.dark .glass-card {
-    background: rgba(30, 40, 30, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.floating-shape {
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
+}
+
+/* Header */
+.app-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    flex-shrink: 0;
+    z-index: 10;
+    padding-top: env(safe-area-inset-top);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--spacing-md);
+    height: 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-light-dim);
+    padding: 12px 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.tab-btn.active {
+    color: var(--color-text-light);
+}
+
+.tab-btn.active::after {
+    content: '';
     position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: var(--color-text-light);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Main Content */
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+    padding-bottom: calc(var(--footer-height) + var(--spacing-md));
+    -webkit-overflow-scrolling: touch;
+}
+
+/* List Items */
+.emergency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.emergency-card {
+    background-color: var(--color-card);
+    border-radius: var(--border-radius);
+    padding: 16px var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    height: 90px;
+    /* Increased height for larger text */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover/Active States */
+.emergency-card:active {
+    transform: scale(0.98);
+}
+
+/* Default Colors for Cards */
+/* NOTRUFE */
+.emergency-card[data-id="euro"] {
+    background-color: #001f3f;
+}
+
+.emergency-card[data-id="fire"] {
+    background-color: #8b0000;
+}
+
+.emergency-card[data-id="police"] {
+    background-color: #0044cc;
+}
+
+.emergency-card[data-id="rescue"] {
+    background-color: #b71c1c;
+}
+
+.emergency-card[data-id="mountain"] {
+    background-color: #006064;
+}
+
+/* NOTDIENSTE */
+.emergency-card[data-id="pipe"] {
+    background-color: #4e342e;
+}
+
+.emergency-card[data-id="plumber"] {
+    background-color: #0277bd;
+}
+
+.emergency-card[data-id="heater"] {
+    background-color: #e64a19;
+}
+
+.emergency-card[data-id="chimney"] {
+    background-color: #424242;
+}
+
+.emergency-card[data-id="clearout"] {
+    background-color: #558b2f;
+}
+
+/* SONSTIGE */
+.emergency-card[data-id="lev-doc"] {
+    background-color: #2e7d32;
+}
+
+.emergency-card[data-id="pharmacy"] {
+    background-color: #c2185b;
+}
+
+.emergency-card[data-id="arboe"] {
+    background-color: #d50000;
+}
+
+.emergency-card[data-id="oeamtc"] {
+    background-color: #f9a825;
+}
+
+.emergency-card[data-id="gas"] {
+    background-color: #ff8f00;
+}
+
+.emergency-card[data-id="poison"] {
+    background-color: #7b1fa2;
+}
+
+.emergency-card[data-id="wire"] {
+    background-color: #ef6c00;
+}
+
+/* Hover States - Darken */
+.emergency-card:hover,
+.emergency-card:active {
+    filter: brightness(0.85);
+}
+
+/* Default Text & Icon styling for Colored Cards */
+/* We can use general rules since all cards are now colored */
+.emergency-card .service-name {
+    color: white;
+}
+
+.emergency-card .service-sub {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.emergency-card .service-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.emergency-card .call-btn {
+    background-color: white;
+    box-shadow: none;
+}
+
+.emergency-card .call-btn svg {
+    fill: currentColor;
+    /* Inherits from parent color set below */
+}
+
+/* Specific Icon Fills for White Buttons */
+.emergency-card[data-id="euro"] .call-btn {
+    color: #001f3f;
+}
+
+.emergency-card[data-id="fire"] .call-btn {
+    color: #8b0000;
+}
+
+.emergency-card[data-id="police"] .call-btn {
+    color: #0044cc;
+}
+
+.emergency-card[data-id="rescue"] .call-btn {
+    color: #b71c1c;
+}
+
+.emergency-card[data-id="mountain"] .call-btn {
+    color: #006064;
+}
+
+.emergency-card[data-id="pipe"] .call-btn {
+    color: #4e342e;
+}
+
+.emergency-card[data-id="plumber"] .call-btn {
+    color: #0277bd;
+}
+
+.emergency-card[data-id="heater"] .call-btn {
+    color: #e64a19;
+}
+
+.emergency-card[data-id="chimney"] .call-btn {
+    color: #424242;
+}
+
+.emergency-card[data-id="clearout"] .call-btn {
+    color: #558b2f;
+}
+
+.emergency-card[data-id="lev-doc"] .call-btn {
+    color: #2e7d32;
+}
+
+.emergency-card[data-id="pharmacy"] .call-btn {
+    color: #c2185b;
+}
+
+.emergency-card[data-id="arboe"] .call-btn {
+    color: #d50000;
+}
+
+.emergency-card[data-id="oeamtc"] .call-btn {
+    color: #f9a825;
+}
+
+.emergency-card[data-id="gas"] .call-btn {
+    color: #ff8f00;
+}
+
+.emergency-card[data-id="poison"] .call-btn {
+    color: #7b1fa2;
+}
+
+.emergency-card[data-id="wire"] .call-btn {
+    color: #ef6c00;
+}
+
+/* Special case for Yellow Card (ÖAMTC) */
+.emergency-card[data-id="oeamtc"] .service-name {
+    color: #111;
+}
+
+.emergency-card[data-id="oeamtc"] .service-sub {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.emergency-card[data-id="oeamtc"] .service-icon {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #111;
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex: 1;
+    overflow: hidden;
+}
+
+.service-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    background-color: #f0f4f8;
     border-radius: 50%;
-    filter: blur(40px);
-    z-index: 0;
-    animation: float 6s ease-in-out infinite;
+    flex-shrink: 0;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+.service-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
-.shape-1 {
-    background: rgba(4, 117, 9, 0.4);
-    width: 300px;
-    height: 300px;
-    top: -50px;
-    left: -50px;
-    animation-delay: 0s;
+.service-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.shape-2 {
-    background: rgba(255, 255, 255, 0.6);
-    width: 200px;
-    height: 200px;
-    bottom: 10%;
-    right: 20%;
-    animation-delay: 1s;
+.service-name {
+    font-weight: 700;
+    font-size: 24px;
+    /* Increased from 16px */
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.shape-3 {
-    background: rgba(4, 117, 9, 0.3);
-    width: 150px;
-    height: 150px;
-    top: 20%;
-    right: 10%;
-    animation-delay: 2s;
+.service-sub {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.shape-4 {
-    background: rgba(239, 238, 223, 0.8);
-    width: 400px;
-    height: 400px;
-    bottom: -100px;
-    left: 20%;
-    animation-delay: 3s;
+.card-right {
+    margin-left: var(--spacing-md);
+    flex-shrink: 0;
 }
 
-.glow-spot {
+.call-btn {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-highlight);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 116, 228, 0.3);
+}
+
+.call-btn:active {
+    transform: none;
+    /* Handled by card */
+}
+
+.call-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* Fixed Ad Panel */
+.ad-panel {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(4, 117, 9, 0.3) 0%, rgba(4, 117, 9, 0) 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-card);
+    border-top: 1px solid #e0e0e0;
+    height: var(--footer-height);
+    padding: 12px var(--spacing-md);
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.ad-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.ad-logo {
+    width: 70px;
+    height: 70px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid #f0f0f0;
+}
+
+.logo-placeholder {
+    font-weight: 700;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ad-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    flex: 1;
+}
+
+.ad-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.ad-link span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ad-link svg {
+    color: var(--color-text-secondary);
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.ad-label {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 9px;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
