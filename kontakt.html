@@ -100,19 +100,18 @@
                     </p>
                 </div>
                 <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
-                <form
-                    action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at,office@installateur-not24.at"
+                <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at"
                     data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
-                        <input name="name"
+                        <input name="name" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Ansprechpartner" type="text" />
+                            placeholder="Ansprechpartner *" type="text" />
                     </div>
                     <div>
-                        <input name="mail"
+                        <input name="mail" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="E-Mail Adresse" type="email" />
+                            placeholder="E-Mail Adresse *" type="email" />
                     </div>
                     <div>
                         <input name="tel" required
@@ -155,13 +154,13 @@
                         </div>
                     </div>
                     <div class="md:col-span-2">
-                        <textarea name="msg"
+                        <textarea name="msg" required
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Nachricht" rows="4"></textarea>
+                            placeholder="Nachricht *" rows="4"></textarea>
                     </div>
                     <div class="md:col-span-2 flex items-start gap-3 py-2">
-                        <input name="Datenschutz" class="mt-1 rounded text-primary focus:ring-primary" id="privacy"
-                            type="checkbox" />
+                        <input name="Datenschutz" required class="mt-1 rounded text-primary focus:ring-primary"
+                            id="privacy" type="checkbox" />
                         <label class="text-sm text-gray-600 dark:text-gray-400 leading-tight"
                             for="privacy">Datenschutzrechtliche Einwilligung: Ich stimme zu, dass meine Angaben zur
                             Kontaktaufnahme gespeichert werden.</label>
