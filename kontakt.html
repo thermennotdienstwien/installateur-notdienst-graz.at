@@ -104,17 +104,19 @@
                     data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
-                        <input name="name" required
+                        <input name="name"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Ansprechpartner *" type="text" />
+                            placeholder="Ansprechpartner" type="text" />
                     </div>
                     <div>
-                        <input name="mail" required
+                        <input name="mail"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="E-Mail Adresse *" type="email" />
+                            placeholder="E-Mail Adresse" type="email" />
                     </div>
                     <div>
                         <input name="tel" required
+                            oninvalid="this.setCustomValidity('Bitte geben Sie Ihre Telefonnummer an.')"
+                            oninput="this.setCustomValidity('')"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Telefonnummer *" type="tel" />
                     </div>
@@ -154,16 +156,18 @@
                         </div>
                     </div>
                     <div class="md:col-span-2">
-                        <textarea name="msg" required
+                        <textarea name="msg"
                             class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
-                            placeholder="Nachricht *" rows="4"></textarea>
+                            placeholder="Nachricht" rows="4"></textarea>
                     </div>
                     <div class="md:col-span-2 flex items-start gap-3 py-2">
-                        <input name="Datenschutz" required class="mt-1 rounded text-primary focus:ring-primary"
+                        <input name="Datenschutz" required
+                            oninvalid="this.setCustomValidity('Bitte stimmen Sie der Datenschutzerklärung zu.')"
+                            oninput="this.setCustomValidity('')" class="mt-1 rounded text-primary focus:ring-primary"
                             id="privacy" type="checkbox" />
-                        <label class="text-sm text-gray-600 dark:text-gray-400 leading-tight"
-                            for="privacy">Datenschutzrechtliche Einwilligung: Ich stimme zu, dass meine Angaben zur
-                            Kontaktaufnahme gespeichert werden.</label>
+                        <label class="text-sm text-gray-600 dark:text-gray-400 leading-tight" for="privacy">Ich bin mit
+                            der <a href="datenschutzerklaerung.html"
+                                class="text-primary hover:underline">Datenschutzerklärung</a> einverstanden.</label>
                     </div>
                     <div class="md:col-span-2 pt-4">
                         <button
@@ -200,6 +204,8 @@
                     <a class="hover:text-primary transition-colors" href="sitemap.html">Sitemap</a>
                     <a class="hover:text-primary transition-colors" href="impressum.html">Impressum</a>
                     <a class="hover:text-primary transition-colors" href="kontakt.html">Kontakt</a>
+                    <a class="hover:text-primary transition-colors"
+                        href="datenschutzerklaerung.html">Datenschutzerklärung</a>
                 </nav>
             </div>
             <a class="flex items-center gap-3 px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-lg transition-all whitespace-nowrap hover:bg-red-900"
