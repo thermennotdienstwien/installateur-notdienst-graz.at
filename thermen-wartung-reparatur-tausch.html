@@ -10,43 +10,15 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/installateur-notdienst-team.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/installateur-notdienst-team.png" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#047509",
-                        "background-light": "#efeedf",
-                        "background-dark": "#1a2e1a",
-                        "glass-light": "rgba(255, 255, 255, 0.4)",
-                        "glass-dark": "rgba(30, 40, 30, 0.4)",
-                        black: "#000000",
-                    },
-                    fontFamily: {
-                        display: ["Google Sans", "sans-serif"],
-                        body: ["Google Sans", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "1rem",
-                        'xl': "1.5rem",
-                        '2xl': "2rem",
-                    }
-                },
-            },
-        };
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/output.css" />
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark font-body min-h-screen relative overflow-x-hidden transition-colors duration-300">
+    class="bg-background-light font-body min-h-screen relative overflow-x-hidden transition-colors duration-300">
     <div class="fixed inset-0 pointer-events-none overflow-hidden">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
@@ -56,25 +28,17 @@
 
     <nav class="fixed w-full z-50 top-0 left-0 px-4 sm:px-6 py-4">
         <div
-            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 dark:bg-glass-dark/70 rounded-2xl flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-3 gap-3 sm:gap-0">
+            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 rounded-2xl flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-3 gap-3 sm:gap-0">
             <div class="flex justify-between items-center w-full sm:w-auto">
                 <a href="/" class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-primary text-3xl">plumbing</span>
-                    <span class="text-lg sm:text-xl font-bold text-black dark:text-white tracking-tight">Installateur
+                    <span class="text-lg sm:text-xl font-bold text-black tracking-tight">Installateur
                         Notdienst Graz</span>
                 </a>
-                <button
-                    class="sm:hidden p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 text-black dark:text-white transition"
-                    onclick="document.getElementById('theme-toggle').click()">
-                    <span class="material-symbols-outlined text-xl">brightness_4</span>
-                </button>
+                
             </div>
             <div class="flex items-center gap-4 w-full sm:w-auto">
-                <button
-                    class="hidden sm:block p-2 rounded-full hover:bg-white/20 dark:hover:bg-black/20 text-black dark:text-white transition"
-                    id="theme-toggle">
-                    <span class="material-symbols-outlined text-xl">brightness_4</span>
-                </button>
+                
                 <a class="flex justify-center w-full sm:w-auto items-center gap-2 px-5 py-2 bg-primary text-white rounded-xl font-bold shadow-md transition-all hover:bg-red-900"
                     href="tel:066493342464">
                     <span class="material-symbols-outlined text-sm">call</span>
@@ -88,34 +52,34 @@
         <!-- Hero Section -->
         <section class="flex items-center justify-center min-h-[calc(100vh-10rem)]">
             <div
-                class="w-full max-w-7xl glass-panel bg-glass-light/50 dark:bg-glass-dark/50 rounded-3xl p-6 sm:p-10 lg:p-20 flex flex-col items-center text-center gap-8 lg:gap-12 shadow-2xl relative overflow-hidden lg:flex-row lg:text-left items-stretch lg:min-h-[700px]">
+                class="w-full max-w-7xl glass-panel bg-glass-light/50 rounded-3xl p-6 sm:p-10 lg:p-20 flex flex-col items-center text-center gap-8 lg:gap-12 shadow-2xl relative overflow-hidden lg:flex-row lg:text-left items-stretch lg:min-h-[700px]">
                 <!-- Badge -->
                 <div
                     class="lg:absolute lg:top-10 lg:right-10 z-30 order-first lg:order-none self-center lg:self-auto w-full lg:w-auto flex justify-center lg:block">
                     <div
-                        class="glass-card px-4 py-2 rounded-xl border border-white/40 flex items-center gap-2 bg-white/40 dark:bg-black/40 backdrop-blur-md shadow-sm">
+                        class="glass-card px-4 py-2 rounded-xl border border-white/40 flex items-center gap-2 bg-white/40 backdrop-blur-md shadow-sm">
                         <span class="material-symbols-outlined text-yellow-500">star</span>
-                        <span class="text-sm font-bold text-black dark:text-white">Zertifizierte Fachkräfte</span>
+                        <span class="text-sm font-bold text-black">Zertifizierte Fachkräfte</span>
                     </div>
                 </div>
 
                 <div
                     class="w-full max-w-2xl space-y-6 lg:space-y-8 flex flex-col justify-center items-center lg:items-start lg:text-left relative z-10 flex-1">
                     <div
-                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 dark:bg-white/10 backdrop-blur-sm border border-white/20">
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm border border-white/20">
                         <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
                         <span
-                            class="text-xs sm:text-sm font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider">24h
+                            class="text-xs sm:text-sm font-semibold text-red-600 uppercase tracking-wider">24h
                             Thermenservice</span>
                     </div>
 
                     <h1
-                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white leading-tight">
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight">
                         Thermenwartung in Graz<br />
-                        <span class="text-primary dark:text-green-400">24/7 Hilfe</span>
+                        <span class="text-primary">24/7 Hilfe</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-black dark:text-gray-300 leading-relaxed max-w-xl">
+                    <p class="text-base sm:text-lg text-black leading-relaxed max-w-xl">
                         Gasgeruch, Gasgebrechen oder defekte Gastherme? Wir bieten rasche
                         <strong>Thermenreparatur</strong>,
                         professionellen <strong>Thermentausch</strong> und regelmäßige
@@ -145,14 +109,14 @@
         <section class="max-w-7xl mx-auto w-full relative">
             <div class="text-center mb-16 relative z-10">
                 <div
-                    class="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full glass-card text-xs font-bold tracking-widest uppercase text-primary dark:text-green-400 border-white/50">
+                    class="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full glass-card text-xs font-bold tracking-widest uppercase text-primary border-white/50">
                     Unsere Leistungen
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    <span class="text-black dark:text-white">Umfassende</span> <span class="text-primary">Thermenservice
+                    <span class="text-black">Umfassende</span> <span class="text-primary">Thermenservice
                         in Graz und Umgebung.</span>
                 </h2>
-                <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
                     Ob Thermenservice, Thermenreparatur oder <a
                         href="/thermen-wartung-reparatur-tausch.html">Thermentausch</a> – wir sind Ihr kompetenter
                     Partner für
@@ -168,11 +132,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">hvac</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">THERMENWARTUNG GRAZ</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Die <strong>regelmäßige Wartung der
+                    <h3 class="text-xl font-bold text-black">THERMENWARTUNG GRAZ</h3>
+                    <p class="text-gray-600 text-sm">Die <strong>regelmäßige Wartung der
                             Gastherme</strong> sorgt für einen sicheren und störungsfreien Betrieb Ihrer Gastherme und
                         verlängert deren Lebensdauer deutlich. Im Rahmen der Thermenwartung werden alle
                         sicherheitsrelevanten Bauteile überprüft, Verschleißteile kontrolliert und die Anlage optimal
@@ -184,11 +148,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">engineering</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">THERMENSERVICE GRAZ</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Ein gründlicher Thermenservice umfasst die
+                    <h3 class="text-xl font-bold text-black">THERMENSERVICE GRAZ</h3>
+                    <p class="text-gray-600 text-sm">Ein gründlicher Thermenservice umfasst die
                         vollständige Überprüfung Ihrer Heizungsanlage inklusive Reinigung des Wärmetauschers, Kontrolle
                         der Brennkammer sowie exakte Einstellung der Gaszufuhr. Durch einen regelmäßigen Thermenservice
                         wird die Leistung Ihrer Therme optimiert und die Betriebssicherheit nachhaltig erhöht.
@@ -199,11 +163,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">autorenew</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">THERMENTAUSCH GRAZ</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Ein professioneller Thermentausch ist die ideale
+                    <h3 class="text-xl font-bold text-black">THERMENTAUSCH GRAZ</h3>
+                    <p class="text-gray-600 text-sm">Ein professioneller Thermentausch ist die ideale
                         Lösung, wenn Ihre bestehende Gastherme veraltet, ineffizient oder reparaturanfällig ist. Beim
                         Thermentausch wird das alte Gerät fachgerecht demontiert und durch eine moderne, energiesparende
                         Therme ersetzt, die den aktuellen technischen Standards entspricht. Ein geplanter Thermentausch
@@ -214,11 +178,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">build</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">THERMENREPARATUR GRAZ</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Eine schnelle und fachgerechte Thermenreparatur
+                    <h3 class="text-xl font-bold text-black">THERMENREPARATUR GRAZ</h3>
+                    <p class="text-gray-600 text-sm">Eine schnelle und fachgerechte Thermenreparatur
                         ist entscheidend, wenn Ihre Heizung nicht mehr richtig funktioniert oder eine Störung meldet.
                         Bei der Thermenreparatur werden Fehlerquellen präzise diagnostiziert und defekte Komponenten
                         professionell instand gesetzt oder ersetzt. Ziel jeder Thermenreparatur ist es, die volle
@@ -229,11 +193,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">propane</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">GASINSTALLATIONEN GRAZ</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Unsere Leistungen im Bereich Gasinstallationen
+                    <h3 class="text-xl font-bold text-black">GASINSTALLATIONEN GRAZ</h3>
+                    <p class="text-gray-600 text-sm">Unsere Leistungen im Bereich Gasinstallationen
                         umfassen die fachmännische Planung, Installation und Überprüfung sämtlicher Gasleitungen und
                         Gasgeräte. Sichere Gasinstallationen sind essenziell für einen zuverlässigen und gefahrlosen
                         Betrieb Ihrer Heiz- und Kochsysteme. Bei Gasgebrechen oder Gasgeruch reagieren wir im Rahmen
@@ -244,11 +208,11 @@
                 <div
                     class="glass-card p-8 rounded-2xl flex flex-col items-start gap-4 hover:-translate-y-2 transition-transform duration-300 group">
                     <div
-                        class="p-3 bg-white/30 dark:bg-white/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                        class="p-3 bg-white/30 rounded-xl group-hover:bg-primary/20 transition-colors">
                         <span class="material-symbols-outlined text-4xl text-primary">support_agent</span>
                     </div>
-                    <h3 class="text-xl font-bold text-black dark:text-white">Installateur Notdienst</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Der Installateur Notdienst steht Ihnen rund um
+                    <h3 class="text-xl font-bold text-black">Installateur Notdienst</h3>
+                    <p class="text-gray-600 text-sm">Der Installateur Notdienst steht Ihnen rund um
                         die Uhr als verlässlicher Ansprechpartner für Heizungs- und Sanitärprobleme zur Verfügung. Ob
                         akuter Heizungsausfall, Rohrbruch oder dringende Störung – unser Installateur Notdienst sorgt
                         für eine schnelle Analyse und sofortige Maßnahmen. Als 24 Stunden Thermenwartung und
@@ -270,7 +234,7 @@
                 <div
                     class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
                 </div>
-                <h2 class="text-3xl font-bold text-black dark:text-white mb-8 text-center">Schnelle Anfrage</h2>
+                <h2 class="text-3xl font-bold text-black mb-8 text-center">Schnelle Anfrage</h2>
                 <form action="https://contact.visiopartners.at/?endpoint=installateur-notdienst-graz.at"
                     data-recaptcha="6LeG_3gsAAAAAKaPQFv4hSH0WyRAnDIFDEIXnVNM" method="POST"
                     class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -281,59 +245,59 @@
                         value="https://installateur-notdienst-graz.at/thermen-wartung-reparatur-tausch.html">
                     <div class="md:col-span-2">
                         <input name="Ansprechpartner"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                            class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Ansprechpartner" type="text" />
                     </div>
                     <div>
                         <input name="email"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                            class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="E-Mail Adresse" type="email" />
                     </div>
                     <div>
                         <input name="Telefonnummer" required
                             oninvalid="this.setCustomValidity('Bitte geben Sie Ihre Telefonnummer an.')"
                             oninput="this.setCustomValidity('')"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                            class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Telefonnummer *" type="tel" />
                     </div>
                     <div class="md:col-span-2">
                         <input name="Adresse"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                            class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Adresse" type="text" />
                     </div>
                     <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
                             <input name="PLZ"
-                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                                class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                                 placeholder="PLZ" type="text" />
                         </div>
                         <div>
                             <input name="Ort"
-                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                                class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                                 placeholder="Ort" type="text" />
                         </div>
                         <div>
                             <select name="service"
-                                class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all text-gray-500">
+                                class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all text-gray-500">
                                 <option value="" disabled selected>Service wählen</option>
-                                <option value="Installateur Notdienst" class="text-black dark:text-white">Installateur
+                                <option value="Installateur Notdienst" class="text-black">Installateur
                                     Notdienst</option>
-                                <option value="Abflussverstopfung" class="text-black dark:text-white">Abflussverstopfung
+                                <option value="Abflussverstopfung" class="text-black">Abflussverstopfung
                                 </option>
-                                <option value="Wasserschaden" class="text-black dark:text-white">Wasserschaden</option>
-                                <option value="Kanalverstopfung" class="text-black dark:text-white">Kanalverstopfung
+                                <option value="Wasserschaden" class="text-black">Wasserschaden</option>
+                                <option value="Kanalverstopfung" class="text-black">Kanalverstopfung
                                 </option>
-                                <option value="Thermenstörung" class="text-black dark:text-white">Thermenstörung
+                                <option value="Thermenstörung" class="text-black">Thermenstörung
                                 </option>
-                                <option value="Thermenwartung" class="text-black dark:text-white">Thermenwartung
+                                <option value="Thermenwartung" class="text-black">Thermenwartung
                                 </option>
-                                <option value="Thermentausch" class="text-black dark:text-white">Thermentausch</option>
+                                <option value="Thermentausch" class="text-black">Thermentausch</option>
                             </select>
                         </div>
                     </div>
                     <div class="md:col-span-2">
                         <textarea name="Nachricht"
-                            class="w-full bg-white/70 dark:bg-black/40 border-white/30 dark:border-white/10 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
+                            class="w-full bg-white/70 border-white/30 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary transition-all"
                             placeholder="Nachricht" rows="4"></textarea>
                     </div>
                     <div class="md:col-span-2 flex items-start gap-3 py-2">
@@ -341,7 +305,7 @@
                             oninvalid="this.setCustomValidity('Bitte stimmen Sie der Datenschutzerklärung zu.')"
                             oninput="this.setCustomValidity('')" class="mt-1 rounded text-primary focus:ring-primary"
                             id="privacy" type="checkbox" />
-                        <label class="text-sm text-gray-600 dark:text-gray-400 leading-tight" for="privacy">Ich bin mit
+                        <label class="text-sm text-gray-600 leading-tight" for="privacy">Ich bin mit
                             der <a href="datenschutzerklaerung.html"
                                 class="text-primary hover:underline">Datenschutzerklärung</a> einverstanden.</label>
                     </div>
@@ -360,72 +324,72 @@
         <section class="max-w-7xl mx-auto w-full mt-24 mb-12 px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="space-y-8 text-center max-w-5xl mx-auto">
                 <h2 class="text-3xl md:text-5xl font-bold leading-tight">
-                    <span class="text-black dark:text-white">Wir warten Gasthermen</span>
+                    <span class="text-black">Wir warten Gasthermen</span>
                     <span class="text-primary">aller Marken</span>
                 </h2>
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-black dark:text-white text-center">WARTUNG, SERVICE,
+                <h3 class="text-2xl font-bold mt-8 mb-4 text-black text-center">WARTUNG, SERVICE,
                     TAUSCH, REPARATUR & NOTDIENST</h3>
-                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p class="text-lg text-gray-700 leading-relaxed">
                     Egal von welchem Hersteller Ihre Therme stammt, wir bieten professionelles <b>Thermenservice,
                         Thermewartung, Thermentausch und Thermenreparatur</b>. Zu unserem Fachgebiet zählen Geräte unter
                     anderem von:
                 </p>
                 <div class="flex flex-wrap justify-center gap-3 pt-6">
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Austria
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Austria
                         Email</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Bosch</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Bosch</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Baxi</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Baxi</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Junkers</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Junkers</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Vaillant</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Vaillant</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Buderus</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Buderus</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Ferroli</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Ferroli</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Hoval</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Hoval</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Ocean</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Ocean</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Ideal
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Ideal
                         Standard</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Comfort</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Comfort</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Nordgas</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Nordgas</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Thermoquell</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Thermoquell</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Wolf</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Wolf</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Baretta</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Baretta</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Gebe</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Gebe</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Justus</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Justus</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Löblich</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Löblich</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Gorenje</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Gorenje</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">De
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">De
                         Dietrich</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Rapido</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Rapido</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Stelrad</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Stelrad</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Sieger</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Sieger</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Strebel</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Strebel</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Viessmann</span>
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Viessmann</span>
                     <span
-                        class="px-4 py-2 bg-white/50 dark:bg-white/10 rounded-lg text-sm font-semibold shadow border border-white/20">Saunier
+                        class="px-4 py-2 bg-white/50 rounded-lg text-sm font-semibold shadow border border-white/20">Saunier
                         Duval</span>
                 </div>
             </div>
@@ -441,7 +405,7 @@
                 </a>
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold">
-                        <span class="text-primary">NOTFALL?</span> <span class="text-black dark:text-white">Rufen Sie
+                        <span class="text-primary">NOTFALL?</span> <span class="text-black">Rufen Sie
                             uns jetzt.</span>
                     </h3>
                 </div>
@@ -460,11 +424,11 @@
                 <!-- Intro -->
                 <div class="text-center space-y-4">
                     <h2 class="text-3xl md:text-5xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Thermenwartung, Reparatur & Heizungsservice in Graz
+                        <span class="text-black">Thermenwartung, Reparatur & Heizungsservice in Graz
                             –</span>
                         <span class="text-primary">Service für viele Marken</span>
                     </h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Unsere Techniker betreuen Heizungsanlagen in Graz, Graz Umgebung und in der gesamten Steiermark.
                         Wir bieten professionelle Thermenwartung, Thermenreparatur und Thermentausch für zahlreiche
                         bekannte Hersteller. Dazu gehören unter anderem Austria Email, Bosch, Baxi, Junkers, Vaillant,
@@ -478,10 +442,10 @@
                 <!-- AUSTRIA EMAIL -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Schnelle Hilfe bei Heizungsstörung in Graz –</span>
+                        <span class="text-black">Schnelle Hilfe bei Heizungsstörung in Graz –</span>
                         <span class="text-primary">AUSTRIA EMAIL THERMEN SERVICE</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Heizung ausgefallen oder funktioniert Ihre Anlage nicht mehr richtig? In Graz, Graz Umgebung und
                         ganz Steiermark stehen wir Ihnen schnell zur Verfügung und helfen bei Heizungsproblemen jeder
                         Art. Für Austria Email Heizsysteme bieten wir zuverlässigen Service rund um Thermenwartung und
@@ -495,10 +459,10 @@
                 <!-- BOSCH -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Wartung, Reparatur & Heizungsservice vom Profi –</span>
+                        <span class="text-black">Wartung, Reparatur & Heizungsservice vom Profi –</span>
                         <span class="text-primary">BOSCH THERMEN IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Benötigen Sie schnelle Hilfe bei einer Heizungsstörung in Graz oder Umgebung? Unser Service ist
                         auch kurzfristig erreichbar und unterstützt Sie zuverlässig bei Problemen mit Ihrer
                         Heizungsanlage. Unser Service für Bosch Heizsysteme umfasst Wartung, Reparatur und Austausch
@@ -511,10 +475,10 @@
                 <!-- BAXI -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">24 Stunden Notdienst bei Heizungsausfall –</span>
+                        <span class="text-black">24 Stunden Notdienst bei Heizungsausfall –</span>
                         <span class="text-primary">BAXI THERME IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Wenn Ihre Heizung nicht mehr richtig funktioniert oder Warmwasser fehlt, ist schnelle Hilfe
                         wichtig. Unser Team ist in Graz und Graz Umgebung erreichbar und unterstützt Sie bei
                         Heizungsproblemen. Bei Baxi Heizsystemen übernehmen wir den kompletten Thermenservice und
@@ -527,10 +491,10 @@
                 <!-- JUNKERS -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Thermenwartung, Reparatur oder Austausch –</span>
+                        <span class="text-black">Thermenwartung, Reparatur oder Austausch –</span>
                         <span class="text-primary">JUNKERS HEIZUNGSSERVICE GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Eine Heizungstörung kann jederzeit auftreten – besonders in der kalten Jahreszeit. Unser Team
                         unterstützt Sie schnell bei Problemen mit Ihrer Heizungsanlage in Graz und der gesamten
                         Steiermark. Für Junkers Heizsysteme bieten wir umfassenden Service und übernehmen
@@ -543,10 +507,10 @@
                 <!-- VAILLANT -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Soforthilfe bei Heizungsproblemen –</span>
+                        <span class="text-black">Soforthilfe bei Heizungsproblemen –</span>
                         <span class="text-primary">VAILLANT THERME SERVICE IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Ihre Heizung zeigt eine Störung oder arbeitet nicht mehr effizient? Unser Service ist in Graz,
                         Graz Umgebung und der gesamten Steiermark erreichbar und hilft schnell bei Heizungsproblemen.
                         Wir betreuen Vaillant Heizsysteme und kümmern uns um Thermenwartung, Thermenreparatur und
@@ -559,11 +523,11 @@
                 <!-- BUDERUS -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Professionelle Wartung und Reparatur Ihrer Heizung
+                        <span class="text-black">Professionelle Wartung und Reparatur Ihrer Heizung
                             –</span>
                         <span class="text-primary">BUDERUS THERMEN IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Heizungsausfall oder Probleme mit der Heizungsanlage? In Graz und Umgebung stehen unsere
                         Techniker bereit und unterstützen Sie bei Störungen oder Wartungsarbeiten. Bei Buderus Heizungen
                         kümmern wir uns um Wartung, Reparatur und Austausch von Thermen und Heizgeräten und betreuen
@@ -575,10 +539,10 @@
                 <!-- WOLF -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Soforthilfe im Heizungsnotfall in Graz –</span>
+                        <span class="text-black">Soforthilfe im Heizungsnotfall in Graz –</span>
                         <span class="text-primary">WOLF THERMENSERVICE</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Wenn Ihre Heizungsanlage nicht richtig funktioniert oder eine Störung anzeigt, stehen wir Ihnen
                         in Graz und der gesamten Steiermark schnell zur Verfügung. Unsere Techniker betreuen Wolf
                         Heizsysteme und übernehmen Thermenwartung, Thermenreparatur und Thermentausch bei Gasthermen,
@@ -590,10 +554,10 @@
                 <!-- GEBE -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Schneller Service bei Heizungsstörungen –</span>
+                        <span class="text-black">Schneller Service bei Heizungsstörungen –</span>
                         <span class="text-primary">GEBE HEIZUNGSSERVICE GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Probleme mit der Heizung oder kein Warmwasser? Unser Service ist in Graz und Graz Umgebung
                         erreichbar und hilft schnell bei Heizungsstörungen. Für Gebe Heizsysteme bieten wir
                         professionellen Kundendienst und kümmern uns um Wartung, Reparatur und Austausch von Gasthermen,
@@ -604,10 +568,10 @@
                 <!-- LÖBLICH -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Wartung und Reparatur moderner Heizungsanlagen –</span>
+                        <span class="text-black">Wartung und Reparatur moderner Heizungsanlagen –</span>
                         <span class="text-primary">LÖBLICH THERMEN IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Bei einer Heizungsstörung oder einem Ausfall Ihrer Anlage ist schnelle Hilfe wichtig. Unser Team
                         unterstützt Sie in Graz und der gesamten Steiermark zuverlässig bei Heizungsproblemen. Für
                         Löblich Heizsysteme übernehmen wir Thermenwartung, Thermenreparatur und Thermentausch und
@@ -619,10 +583,10 @@
                 <!-- VIESSMANN -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">Zuverlässiger Kundendienst für Heizsysteme –</span>
+                        <span class="text-black">Zuverlässiger Kundendienst für Heizsysteme –</span>
                         <span class="text-primary">VIESSMANN THERMEN SERVICE GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Funktioniert Ihre Heizung nicht mehr richtig oder benötigt sie eine Wartung? Unser Team steht
                         Ihnen in Graz und Umgebung schnell zur Verfügung. Für Viessmann Heizsysteme bieten wir
                         zuverlässigen Service und kümmern uns um Gasthermen, Brennwertthermen und Heizkessel sowie um
@@ -633,11 +597,11 @@
                 <!-- SAUNIER DUVAL -->
                 <div class="text-center space-y-4">
                     <h3 class="text-2xl md:text-3xl font-bold leading-tight flex flex-col items-center gap-2">
-                        <span class="text-black dark:text-white">24/7-NOTDIENST FÜR THERMEN-STÖRUNGEN, REPARATUR ODER
+                        <span class="text-black">24/7-NOTDIENST FÜR THERMEN-STÖRUNGEN, REPARATUR ODER
                             TAUSCH –</span>
                         <span class="text-primary">SAUNIER DUVAL THERME IN GRAZ</span>
                     </h3>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
                         Eine Heizungsstörung kommt oft unerwartet und erfordert schnelle Unterstützung. Unser Service
                         ist in Graz, Graz Umgebung und ganz Steiermark erreichbar und hilft bei Heizungsproblemen.
                         Unsere Techniker betreuen Saunier Duval Heizsysteme und übernehmen Thermenwartung,
@@ -659,7 +623,7 @@
                 </a>
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold">
-                        <span class="text-primary">NOTFALL?</span> <span class="text-black dark:text-white">Rufen Sie
+                        <span class="text-primary">NOTFALL?</span> <span class="text-black">Rufen Sie
                             uns jetzt.</span>
                     </h3>
                 </div>
@@ -678,38 +642,38 @@
                     Junkers, Wolf, BAXI, Viessmann und Vaillant Thermenwartung in Graz
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold leading-tight">
-                    <span class="text-black dark:text-white"><strong>Thermenwartung Graz</strong> – Sicherheit und
+                    <span class="text-black"><strong>Thermenwartung Graz</strong> – Sicherheit und
                         Effizienz</span><br />
                     <span class="text-primary">für Ihre Heizungsanlage</span>
                 </h2>
 
                 <div class="space-y-6 mt-12 flex flex-col items-center">
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl">
+                    <p class="text-lg text-gray-700 leading-relaxed text-center max-w-4xl">
                         Eine regelmäßige <strong>Thermenwartung in Graz</strong> ist entscheidend, um die
                         Betriebssicherheit, Energieeffizienz und Lebensdauer Ihrer Heizungsanlage zu gewährleisten. In
                         der Regel sollte eine <strong>Gasthermen Wartung</strong> einmal jährlich erfolgen, da nur so
                         ein störungsfreier und sicherer Betrieb garantiert werden kann. Zudem verlangen viele Hersteller
                         und Versicherungen einen entsprechenden Wartungsnachweis.
                     </p>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl">
+                    <p class="text-lg text-gray-700 leading-relaxed text-center max-w-4xl">
                         Wir übernehmen die fachgerechte <strong>Wartung von Thermen</strong> für sämtliche gängigen
                         Marken und Gerätetypen – von klassischen <strong>Gasthermen</strong> über moderne
                         <strong>Brennwertthermen</strong> bis hin zu Heizkesseln und Kombigeräten. Durch eine
                         professionelle <strong>Heizungswartung</strong> lassen sich teure Reparaturen, unerwartete
                         Ausfälle und unnötig hoher Gasverbrauch vermeiden.
                     </p>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl">
+                    <p class="text-lg text-gray-700 leading-relaxed text-center max-w-4xl">
                         Unsere erfahrenen Techniker prüfen sämtliche sicherheitsrelevanten Komponenten, reinigen
                         verschmutzte Bauteile gründlich und optimieren die Einstellungen Ihrer Anlage. Ziel jeder
                         <strong>Thermenwartung Graz</strong> ist es, die volle Leistungsfähigkeit Ihrer Heizung zu
                         erhalten und maximale Sicherheit für Ihr Zuhause zu gewährleisten.
                     </p>
 
-                    <h3 class="text-2xl font-bold mt-8 mb-4 text-black dark:text-white text-center">Was umfasst eine
+                    <h3 class="text-2xl font-bold mt-8 mb-4 text-black text-center">Was umfasst eine
                         professionelle
                         Thermenwartung?</h3>
                     <ul
-                        class="list-disc text-gray-700 dark:text-gray-300 leading-relaxed text-left inline-block space-y-2">
+                        class="list-disc text-gray-700 leading-relaxed text-left inline-block space-y-2">
                         <li>Gründliche Funktions- und Sicherheitskontrolle der gesamten Anlage</li>
                         <li>Reinigung von Brenner und Wärmetauscher zur Effizienzsteigerung</li>
                         <li>Überprüfung des Ausdehnungsgefäßes und aller sicherheitsrelevanten Bauteile</li>
@@ -718,7 +682,7 @@
                         <li>Entlüftung und abschließende Dokumentation mit Prüfprotokoll</li>
                     </ul>
 
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center max-w-4xl mt-6">
+                    <p class="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mt-6">
                         Mit einer rechtzeitig durchgeführten <strong>Thermenwartung</strong> schützen Sie sich vor
                         <strong>Heizungsausfall</strong>, erhöhtem Energieverbrauch und möglichen Sicherheitsrisiken.
                         Vertrauen Sie auf professionelle Betreuung in Graz – zuverlässig, fachgerecht und termingerecht.
@@ -733,44 +697,44 @@
             <div class="flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 space-y-6">
                     <h2 class="text-3xl md:text-5xl font-bold leading-tight">
-                        <span class="text-black dark:text-white">Was gehört zu einem</span><br />
+                        <span class="text-black">Was gehört zu einem</span><br />
                         <span class="text-primary">regelmäßigen Thermenservice?</span>
                     </h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
                         Die jährliche und regelmäßige Thermenwartung ist wichtig, um Sicherheitsrisiken wie
                         Abgasaustritt zu minimieren und die Lebensdauer sowie die Heizleistung Ihres Gerätes zu erhöhen.
                         Unsere Services umfassen unter anderem:
                     </p>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Regelmäßiger Thermenservice
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Überprüfung und Reinigung Ihrer Gastherme
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Professionelle Reinigung des Wärmetauschers
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Individuelle Einstellung der Gaszufuhr
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Regelmäßige Überprüfung des Ausdehnungsgefäßes
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Optimierung aller Einstellungen
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Entlüftung der Heizkörper
                         </li>
-                        <li class="flex items-center gap-3 text-lg text-black dark:text-white font-medium">
+                        <li class="flex items-center gap-3 text-lg text-black font-medium">
                             <span class="material-symbols-outlined text-green-500">check_circle</span>
                             Kontrolle des Kohlenmonoxidausstoßes
                         </li>
@@ -779,7 +743,8 @@
                 <div class="flex-1 w-full flex justify-center">
                     <div
                         class="glass-card p-6 rounded-3xl max-w-sm rotate-2 hover:rotate-0 transition-transform bg-primary/10">
-                        <img alt="Gas Notdienst" class="rounded-2xl" src="assets/gas_notdienst_service.png" />
+                        <img alt="Gas Notdienst" class="rounded-2xl"
+                            src="assets/gas_notdienst_service.png" />
                     </div>
                 </div>
             </div>
@@ -790,29 +755,29 @@
                 <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
                     <div class="flex-1 space-y-4">
                         <h3 class="text-3xl md:text-5xl font-bold leading-tight">
-                            <span class="text-black dark:text-white">Rundum-Service für Therme</span><br />
+                            <span class="text-black">Rundum-Service für Therme</span><br />
                             <span class="text-primary">und Heizung in Graz</span>
                         </h3>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Als professioneller Ansprechpartner für Thermenwartung Graz und modernen Heizungsservice
                             bieten wir Ihnen sämtliche Leistungen aus einer Hand. Von der regelmäßigen Inspektion über
                             die schnelle Reparatur bis hin zum kompletten Geräteaustausch kümmern wir uns zuverlässig um
                             Ihre Heizungsanlage. Unser erfahrenes Team ist sowohl für geplante Wartungen als auch im
                             akuten Störungsfall rasch zur Stelle.
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Wir betreuen unterschiedlichste Systeme und Gerätetypen – nicht nur klassische Gasthermen
                             oder Kombithermen, sondern auch komplexe Heizlösungen für Wohnungen, Einfamilienhäuser und
                             Gewerbeobjekte. Dazu zählen unter anderem Brennwertthermen, Heizkessel mit Speicherlösungen
                             sowie energieeffiziente Warmwassersysteme.
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Ebenso übernehmen wir die fachgerechte Wartung und Reparatur von Warmwasserboilern,
                             Durchlauferhitzern, Gaskesseln und weiteren gasbetriebenen Anlagen. Moderne Heizsysteme wie
                             Luftwärmepumpen gehören genauso zu unserem Leistungsbereich wie traditionelle Öl- oder
                             Gasheizungen.
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Mit unserem ganzheitlichen Heizungsservice in Graz stellen wir sicher, dass Ihre Anlage
                             effizient, sicher und langlebig arbeitet. Regelmäßige Thermenwartung schützt vor Ausfällen,
                             senkt den Energieverbrauch und sorgt für maximale Betriebssicherheit – damit Sie sich
@@ -822,7 +787,8 @@
                     <div class="w-full md:w-1/3 flex justify-center">
                         <div
                             class="glass-card p-6 rounded-3xl max-w-sm rotate-2 hover:rotate-0 transition-transform bg-primary/10 w-full">
-                            <img alt="Rundum Service" class="rounded-2xl shadow-lg w-full object-cover aspect-square"
+                            <img alt="Rundum Service"
+                                class="rounded-2xl shadow-lg w-full object-cover aspect-square"
                                 src="assets/thermenservice_rundum_real.png" />
                         </div>
                     </div>
@@ -832,10 +798,10 @@
                 <div class="flex flex-col md:flex-row gap-12 items-center">
                     <div class="flex-1 space-y-4">
                         <h3 class="text-3xl md:text-5xl font-bold leading-tight">
-                            <span class="text-black dark:text-white">Thermentausch in Graz –</span><br />
+                            <span class="text-black">Thermentausch in Graz –</span><br />
                             <span class="text-primary">moderne Technik</span>
                         </h3>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Wenn Ihre bestehende Heizungsanlage ständig Probleme verursacht oder nicht mehr effizient
                             arbeitet, ist ein professioneller Thermentausch Graz oft die sinnvollste Lösung. Veraltete
                             Gasthermen verbrauchen meist unnötig viel Energie und erhöhen langfristig die Heizkosten.
@@ -843,7 +809,7 @@
                             und übernehmen den kompletten Austausch – von der Demontage des Altgeräts bis zur
                             fachgerechten Installation der neuen Therme.
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Ein geplanter Thermentausch steigert nicht nur die Effizienz, sondern erhöht auch die
                             Sicherheit und den Wohnkomfort nachhaltig.
                         </p>
@@ -851,7 +817,8 @@
                     <div class="w-full md:w-1/3 flex justify-center">
                         <div
                             class="glass-card p-6 rounded-3xl max-w-sm -rotate-2 hover:rotate-0 transition-transform bg-primary/10 w-full">
-                            <img alt="Thermentausch" class="rounded-2xl shadow-lg w-full object-cover aspect-square"
+                            <img alt="Thermentausch"
+                                class="rounded-2xl shadow-lg w-full object-cover aspect-square"
                                 src="assets/thermentausch_real.png" />
                         </div>
                     </div>
@@ -861,17 +828,17 @@
                 <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
                     <div class="flex-1 space-y-4">
                         <h3 class="text-3xl md:text-5xl font-bold leading-tight">
-                            <span class="text-black dark:text-white">Thermenreparatur Graz –</span><br />
+                            <span class="text-black">Thermenreparatur Graz –</span><br />
                             <span class="text-primary">schnelle Hilfe bei Störungen</span>
                         </h3>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Zeigt Ihre Heizung eine Fehlermeldung, verliert Druck oder bleibt komplett kalt? Unsere
                             Experten für Thermenreparatur Graz analysieren die Ursache rasch und beheben Defekte
                             zuverlässig. Ob akute Heizungsstörung, Zündproblem, defektes Bauteil oder kompletter
                             Heizungsausfall – wir sorgen für eine professionelle Instandsetzung Ihrer Gastherme oder
                             Kombitherme.
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-700 leading-relaxed">
                             Dank Erfahrung mit unterschiedlichsten Herstellern und Modellen gewährleisten wir eine
                             effiziente Reparatur, transparente Abläufe und eine schnelle Wiederherstellung Ihrer
                             Wärmeversorgung in Graz.
@@ -880,7 +847,8 @@
                     <div class="w-full md:w-1/3 flex justify-center">
                         <div
                             class="glass-card p-6 rounded-3xl max-w-sm rotate-2 hover:rotate-0 transition-transform bg-primary/10 w-full">
-                            <img alt="Thermenreparatur" class="rounded-2xl shadow-lg w-full object-cover aspect-square"
+                            <img alt="Thermenreparatur"
+                                class="rounded-2xl shadow-lg w-full object-cover aspect-square"
                                 src="assets/thermenreparatur_real.png" />
                         </div>
                     </div>
@@ -889,7 +857,7 @@
 
             <div class="inline-block bg-primary/10 border border-primary/20 rounded-2xl p-6 mt-8">
                 <h4 class="text-2xl font-bold text-primary mb-2">24H NOTDIENST FÜR THERMEN UND HEIZSYSTEME</h4>
-                <p class="text-gray-700 dark:text-gray-300 mb-6"><mark>Unser Team ist 24 Stunden täglich für Sie
+                <p class="text-gray-700 mb-6"><mark>Unser Team ist 24 Stunden täglich für Sie
                         erreichbar – telefonisch unter 0676 718 04 64 sowie per E-Mail. Wir nehmen uns Zeit für Ihr
                         Anliegen, beraten Sie persönlich und bieten Ihnen eine Lösung, die genau auf Ihre Situation
                         abgestimmt ist. Kontaktieren Sie uns jederzeit – wir sind gerne für Sie da.</mark></p>
@@ -906,7 +874,7 @@
         <section class="max-w-7xl mx-auto w-full mt-24 px-4 sm:px-6 lg:px-8 relative z-10 mb-24">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-bold uppercase">
-                    <span class="text-black dark:text-white">Häufig gestellte</span> <span
+                    <span class="text-black">Häufig gestellte</span> <span
                         class="text-primary">Fragen</span>
                 </h2>
             </div>
@@ -916,7 +884,7 @@
                 <div class="glass-card rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="faq-toggle w-full px-8 py-6 flex items-center justify-between text-left group">
                         <span
-                            class="text-xl font-bold text-black dark:text-white group-hover:text-primary transition-colors flex items-center gap-3">
+                            class="text-xl font-bold text-black group-hover:text-primary transition-colors flex items-center gap-3">
                             <span class="material-symbols-outlined text-primary">help</span>
                             Was kostet eine Thermenwartung?
                         </span>
@@ -925,7 +893,7 @@
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-8 pb-6">
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed pt-2 border-t border-primary/10">
+                            <p class="text-gray-700 leading-relaxed pt-2 border-t border-primary/10">
                                 Die Thermenwartung Kosten können variieren, je nach Gerätetyp, Alter der Gastherme
                                 und
                                 notwendigen Ersatzteilen. Wir bieten faire und transparente Preise. Für eine
@@ -941,7 +909,7 @@
                 <div class="glass-card rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="faq-toggle w-full px-8 py-6 flex items-center justify-between text-left group">
                         <span
-                            class="text-xl font-bold text-black dark:text-white group-hover:text-primary transition-colors flex items-center gap-3">
+                            class="text-xl font-bold text-black group-hover:text-primary transition-colors flex items-center gap-3">
                             <span class="material-symbols-outlined text-primary">help</span>
                             Wer trägt die Kosten für Therme und Wartung in Wien (bzw. Graz)?
                         </span>
@@ -950,7 +918,7 @@
                     </button>
                     <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-8 pb-6">
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed pt-2 border-t border-primary/10">
+                            <p class="text-gray-700 leading-relaxed pt-2 border-t border-primary/10">
                                 Grundsätzlich gilt nach der aktuellen Rechtslage in Österreich (z.B. ABGB und MRG),
                                 dass
                                 der Mieter für die regelmäßige Wartung der Gastherme aufkommen muss
@@ -1003,80 +971,80 @@
                     <!-- Graz Districts -->
                     <div>
                         <h3
-                            class="text-xl md:text-2xl font-bold text-black dark:text-white mb-2 border-l-4 border-primary pl-4">
+                            class="text-xl md:text-2xl font-bold text-black mb-2 border-l-4 border-primary pl-4">
                             Bezirke in Land Graz: Wir sind in allen Bezirken und Gemeinden in Graz im Einsatz</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-4xl">
+                        <p class="text-gray-600 mb-6 max-w-4xl">
                             Egal ob Innere Stadt oder Puntigam – unser Thermen Notdienst-Team ist in allen 17
                             Stadtbezirken
                             rasch und zuverlässig für Sie zur Stelle.
                         </p>
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>INNERE
                                 STADT
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 LEONHARD
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GEIDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-green-500 text-base">check_circle</span>LEND
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GRIES
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>JAKOMINI
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>LIEBENAU
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 PETER
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>WALTENDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-green-500 text-base">check_circle</span>RIES
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>MARIATROST
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>ANDRITZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GÖSTING
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>EGGENBERG
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>WETZELSDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>STRAẞGANG
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>PUNTIGAM
                             </div>
@@ -1085,163 +1053,163 @@
                     <!-- Municipalities -->
                     <div>
                         <h3
-                            class="text-xl md:text-2xl font-bold text-black dark:text-white mb-2 border-l-4 border-primary pl-4">
+                            class="text-xl md:text-2xl font-bold text-black mb-2 border-l-4 border-primary pl-4">
                             Einige Gemeinden in Graz-Umgebung: Wir sind in ganz Graz tätig</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-4xl">Unser professionelles Team garantiert
+                        <p class="text-gray-600 mb-8 max-w-4xl">Unser professionelles Team garantiert
                             kurze Reaktionszeiten und fachgerechte Lösungen für Ihre Heizungs- und Sanitäranlagen in der
                             gesamten Region Graz-Umgebung.</p>
                         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>DEUTSCHFEISTRITZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>DOBL-ZWARING
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>EGGERSDORF
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>FELDKIRCHEN
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>FERNITZ-MELLACH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>FROHNLEITEN
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GÖSSENDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GRATKORN
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>GRATWEIN-STRAßENGEL
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-green-500 text-base">check_circle</span>HART
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>HASELSDORF-TOBELBAD
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>HAUSMANNSTÄTTEN
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>HITZENDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>KAINBACH
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>KALSDORF
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>KUMBERG
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>LAßNITZHÖHE
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>LIEBOCH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>NESTELBACH
                                 BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>PEGGAU
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>PREMSTÄTTEN
                                 (UNTERPREMSTÄTTEN-ZETTLING)
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>RAABA-GRAMBACH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 BARTHOLOMÄ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 MAREIN BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 OSWALD BEI
                                 PLANKENWARTH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SANKT
                                 RADEGUND BEI GRAZ
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SEIERSBERG-PIRKA
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>SEMRIACH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>STATTEGG
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>STIWOLL
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-green-500 text-base">check_circle</span>THAL
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>ÜBELBACH
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>VASOLDSBERG
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>WEINITZEN
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>WERNDORF
                             </div>
-                            <div class="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                            <div class="text-sm font-medium text-gray-700 flex items-center gap-2">
                                 <span
                                     class="material-symbols-outlined text-green-500 text-base">check_circle</span>WUNDSCHUH
                             </div>
@@ -1255,17 +1223,17 @@
 
     <footer class="relative z-10 px-6 pb-12">
         <div
-            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 dark:bg-glass-dark/70 rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            class="max-w-7xl mx-auto glass-panel bg-glass-light/70 rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 flex-1 w-full sm:w-auto">
                 <a href="/" class="flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined text-primary text-2xl">plumbing</span>
                     <span
-                        class="text-lg font-bold text-black dark:text-white tracking-tight text-center sm:text-left">Installateur
+                        class="text-lg font-bold text-black tracking-tight text-center sm:text-left">Installateur
                         Notdienst
                         Graz</span>
                 </a>
                 <nav
-                    class="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 text-sm font-medium text-gray-700 dark:text-gray-300 sm:ml-4">
+                    class="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-6 text-sm font-medium text-gray-700 sm:ml-4">
                     <a class="hover:text-primary transition-colors" href="/">Startseite</a>
                     <a class="hover:text-primary transition-colors" href="sitemap.html">Sitemap</a>
                     <a class="hover:text-primary transition-colors" href="impressum.html">Impressum</a>
