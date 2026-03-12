@@ -126,3 +126,26 @@ body {
     pointer-events: none;
     z-index: 0;
 }
+
+
+
+
+
+
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+@media (max-width: 640px) {
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
